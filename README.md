@@ -14,3 +14,7 @@ Sistema com cadastro de usuários (log in, senha, perfil).
 ### Ideias de Nome
 
 - Marking, Plural...
+
+## Tarefas
+Dividir grupo em front e back end
+Fazer o banco de dados com os usuarios e empresas
