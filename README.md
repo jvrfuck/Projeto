@@ -16,7 +16,7 @@ Sistema com cadastro de usuários (log in, senha, perfil).
 
 ### Ideias de Nome
 
-- Marking, Plural, teste.
+- Marking, Plural,
 
 ## Tarefas
 Dividir grupo em front e back end
