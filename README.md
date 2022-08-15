@@ -1,11 +1,11 @@
+## Projeto final do Entra 21
+
+- Equipe: Clayson Nardino, Douglas Bitencourt, Jéssica Maros, João Rios, Rogério Hanke
+
 # Projeto
 
 - Requisitos do projeto: https://docs.google.com/document/d/15Runmr5Ljqp23SenOck1fnrTyBloaZlHDk97gjwZP_k/edit
 - Trello das etapas do projeto: https://trello.com/b/UMKDek1s/projeto-entra-21
-
-## Projeto final do Entra 21
-
-- Equipe: Clayson Nardino, Douglas Bitencourt, Jéssica Maros, João Rios, Rogério Hanke
 
 
 ### Objetivo
