@@ -1,6 +1,6 @@
 ## Projeto final do Entra 21
 
-- Equipe: Clayson Nardino, Douglas Bitencourt, Jéssica Maros, João Rios, Rogério Hanke
+- Desenvolvedores: Clayson Nardino, Douglas Bitencourt, Jéssica Maros, João Rios, Rogério Hanke
 
 # Projeto
 
@@ -12,6 +12,7 @@
 
 Criação de um app/site de para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa).
 Sistema com cadastro de usuários (log in, senha, perfil). 
+Sistema de fidelidade, para gerar bonus ou desconto para o cliente para cada 10x que o mesmo realize um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade)
 
 
 ### Ideias de Nome
