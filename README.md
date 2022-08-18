@@ -18,13 +18,21 @@ Inclusão de Sistema de Fidelidade, para gerar bonus ou desconto para o cliente 
 Utilizaremos ferramentas de back e front-end em python, como Django, assim como javascript, html, css e utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
 
 
-### Ideias de Nome
+## Nome
 
-- Marking, Plural,
+-Agendaí
+
 
 ## Tarefas
-Dividir grupo em front e back end
-Fazer o banco de dados com os usuarios e empresas
+
+- Dividir grupo em front(dupla) e back end(trio);
+
+- Fazer o banco de dados com os usuarios e empresas;
+
+- Definir colocaração, layout e quantas paginas;
+
+- Definir logo.
+
 
 ## Projetos futuros
 
