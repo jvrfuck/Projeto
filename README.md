@@ -1,6 +1,6 @@
 ## Projeto final do Entra 21
 
-- Desenvolvedores: Clayson Nardino, Douglas Bitencourt, Jéssica Maros, João Rios, Rogério Hanke
+- Desenvolvedores: Clayson Nardino, Douglas Bitencourt Cardoso, João Vítor Rios Fuck, Jéssica Tayna Maros, Rogério Tatsch Hanke.
 
 # Projeto
 
