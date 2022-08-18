@@ -13,8 +13,12 @@ Logo do Site:
 
 ### Objetivo
 
+<<<<<<< HEAD
 Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
 
+=======
+Criação de um site/aplicicação web de para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa).
+>>>>>>> 2dcaa7736344c09205575bc1245fa7072f302ff6
 Sistema com cadastro de usuários (log in, senha, perfil).
 
 Inclusão de Sistema de Fidelidade, para gerar bônus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
@@ -23,16 +27,23 @@ Utilizaremos ferramentas de back e front-end em python, como Django, assim como 
 
 ## Nome
 
+<<<<<<< HEAD
 - Agendaí
+=======
+-Agendaí
+>>>>>>> 2dcaa7736344c09205575bc1245fa7072f302ff6
 
 ## Tarefas
 
 - Dividir grupo em front(dupla) e back end(trio);
+<<<<<<< HEAD
 
 - Fazer o banco de dados com os usuários e empresas;
 
 - Definir coloração, layout e quantas páginas;
 
+=======
+>>>>>>> 2dcaa7736344c09205575bc1245fa7072f302ff6
 - Fazer o banco de dados com os usuarios e empresas;
 - Definir colocaração, layout e quantas paginas;
 - Definir logo.
