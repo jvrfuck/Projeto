@@ -2,7 +2,7 @@
 #### CADASTRO USUARIO
 - Nome
 - Telefone
-- Cpf (talvez)
+- CPF (talvez)
 - LOGIN SENHA
 - BARRA DE BUSCA
 - LISTAGEM DE EMPRESAS
@@ -19,12 +19,12 @@
 - LOGIN SENHA
 - ADICONAR PRODUTO(FUNÇAO/PRESO)
 
-### WHATSAPP ( TALVEZ)
+### WHATSAPP (TALVEZ)
 - MANDA O DIA/ HORARIO
 - MANDA O ORÇAMENTO E O ENDEREÇO 
 
-### sistemas de status do Produto
-- variação de status: horário ocupado, horário livre
+### Sistemas de Status do Produto
+- Variação de status: horário ocupado, horário livre
 
 ### Sistema de Fidelidade
 - 
