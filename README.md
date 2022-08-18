@@ -1,4 +1,4 @@
-## Projeto final do Entra 21
+## Projeto final do Entra 21 = Agendaí
 
 - Desenvolvedores: Clayson Nardino, Douglas Bitencourt Cardoso, João Vítor Rios Fuck, Jéssica Tayna Maros, Rogério Tatsch Hanke.
 
