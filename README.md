@@ -12,7 +12,8 @@
 
 Criação de um site/aplicicação web de para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa).
 Sistema com cadastro de usuários (log in, senha, perfil). 
-Sistema de fidelidade, para gerar bonus ou desconto para o cliente para cada 10x que o mesmo realize um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
+Sistema de fidelidade, para gerar bonus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
+Utilizaremos ferramentas de back e front-end em python, como Django, assim como utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
 
 
 ### Ideias de Nome
