@@ -26,6 +26,9 @@
 ### sistemas de status do Produto
 - variação de status: horário ocupado, horário livre
 
+### Sistema de Fidelidade
+- 
+
 ### Dashboard
 - vendas por cliente (gráfico pra empresa)
 - serviços por venda mês
