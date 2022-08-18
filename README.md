@@ -15,7 +15,7 @@ Sistema com cadastro de usuários (log in, senha, perfil).
 
 Inclusão de Sistema de Fidelidade, para gerar bonus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
 
-Utilizaremos ferramentas de back e front-end em python, como Django, assim como utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
+Utilizaremos ferramentas de back e front-end em python, como Django, assim como javascript, html, css e utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
 
 
 ### Ideias de Nome
