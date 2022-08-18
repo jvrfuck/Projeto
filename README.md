@@ -9,7 +9,8 @@
 
 Logo do Site:  
 
-![LogoAgendaí](Images\LogoAgendai.png  "Logo Agendaí")
+<img src="Images\LogoAgendai.png">
+
 
 ### Objetivo
 
