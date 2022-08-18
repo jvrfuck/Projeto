@@ -10,9 +10,11 @@
 
 ### Objetivo
 
-Criação de um site/aplicicação web de para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). /n
-Sistema com cadastro de usuários (log in, senha, perfil)./n
-Inclusão de Sistema de Fidelidade, para gerar bonus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade). /n
+Criação de um site/aplicicação web de para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
+Sistema com cadastro de usuários (log in, senha, perfil).
+
+Inclusão de Sistema de Fidelidade, para gerar bonus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
+
 Utilizaremos ferramentas de back e front-end em python, como Django, assim como utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
 
 
