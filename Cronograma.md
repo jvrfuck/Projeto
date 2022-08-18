@@ -1,31 +1,32 @@
-1.TELA INICIAL
-	1.1 CADASTRO USUARIO
-	1.1.1 Nome
-	1.1.2 Telefone
-	1.1.3 Cpf (talvez)
-	1.2 LOGIN SENHA
-	1.3 BARRA DE BUSCA
-	1.4 LISTAGEM DE EMPRESAS
-1.5	SISTEMA DE BUSCA PELA EMPRESA
+### TELA INICIAL
+#### CADASTRO USUARIO
+- Nome
+- Telefone
+- Cpf (talvez)
+- LOGIN SENHA
+- BARRA DE BUSCA
+- LISTAGEM DE EMPRESAS
+- SISTEMA DE BUSCA PELA EMPRESA
 
-1.2.1 CADASTRO TELA EMPRESA
-1.2.1.1 Nome
-1.2.1.2 Endereço
-1.2.1.3 Telefone
-1.2.1.4 CNPJ
-1.2.1.5 Telefone
-	1.2.1.6 Métodos de Pagamento
-1.2.2 LOGIN SENHA
-1.2.3 ADICONAR PRODUTO(FUNÇAO/PRESO)
 
-2.0 WHATS( TALVEZ)
-2.1 MANDA O DIA/ HORARIO
-2.2 MANDA O ORÇAMENTO E O ENDEREÇO 
+#### CADASTRO TELA EMPRESA
+- Nome
+- Endereço
+- Telefone
+- CNPJ
+- Telefone
+- Métodos de Pagamento
+- LOGIN SENHA
+- ADICONAR PRODUTO(FUNÇAO/PRESO)
 
-3.0 sistemas de status do Produto
-	3.1 variação de status: horário ocupado, horário livre
+### WHATSAPP ( TALVEZ)
+- MANDA O DIA/ HORARIO
+- MANDA O ORÇAMENTO E O ENDEREÇO 
 
-4. 0 Dashboard
-	4.1 vendas por cliente (gráfico pra empresa)
-	4.2 serviços por venda mês
-	4.3 gráficos de comparação com o outro mês
+### sistemas de status do Produto
+- variação de status: horário ocupado, horário livre
+
+### Dashboard
+- vendas por cliente (gráfico pra empresa)
+- serviços por venda mês
+- gráficos de comparação com o outro mês
