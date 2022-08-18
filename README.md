@@ -1,13 +1,15 @@
-## Projeto final do Entra 21 = Agendaí
+## Projeto final do Entra 21 = Agendaí <img src="Images\LogoAgendai.png" width="25">
 
 - Desenvolvedores: Clayson Nardino, Douglas Bitencourt Cardoso, João Vítor Rios Fuck, Jéssica Tayna Maros, Rogério Tatsch Hanke.
 
-# Projeto
+# Projeto 
 
 - Requisitos do projeto: https://docs.google.com/document/d/15Runmr5Ljqp23SenOck1fnrTyBloaZlHDk97gjwZP_k/edit
 - Trello das etapas do projeto: https://trello.com/b/UMKDek1s/projeto-entra-21
-  
-![LogoAgendaí](./LogoAgendai.png "Logo Agendaí")
+
+Logo do Site:  
+
+![LogoAgendaí](Images\LogoAgendai.png  "Logo Agendaí")
 
 ### Objetivo
 
