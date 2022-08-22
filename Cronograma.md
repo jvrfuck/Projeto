@@ -27,6 +27,7 @@
 - MANDA O ORÇAMENTO E O ENDEREÇO
 
 ### Sistemas de Status do Produto
+
 - Variação de status: horário ocupado, horário livre
 
 ### Sistema de Fidelidade
