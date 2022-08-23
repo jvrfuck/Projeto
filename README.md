@@ -39,3 +39,58 @@ Utilizaremos ferramentas de back e front-end em python, como Django, assim como 
 
 - Controle financeiro
 - Pagamento por pix e cartão pelo APP
+
+## Criação de tabelas do banco de Dados
+
+Empresa
+-
+empresa_id pk
+empresa_nome string
+empresa_atividade 
+empresa_cnpj 
+empresa_endereco
+empresa_telefone
+empresa_email
+empresa_servico FK >- Servico.servico_id
+
+Pessoas
+-
+pessoas_id pk FK >- Usuario.usuario_nome
+pessoas_nome 
+pessoas_cpf
+pessoas_dataNascimento
+pessoas_telefone
+pessoas_email
+pessoas_fidelidade
+
+Horario
+-
+horario_id pk
+horario_empresa FK >- Empresa.empresa_id
+horario_pesssoas FK >- Pessoas.pessoas_id
+horario_local FK >- Locais.local_id
+horario_servico FK >- Servico.servico_id 
+horario_duracao
+horario_inicio(datetime)
+horario_tipo
+
+Servico
+-
+servico_id pk
+servico_nome
+servico_registroClasse
+servico_descricao
+servico_miniCV
+servico_valor
+
+Usuario
+-
+usuario_id pk
+usuario_nome FK >- Empresa.empresa_id
+
+Locais
+-
+local_id pk FK >- Empresa.empresa_endereco
+local_nome
+local_endereco 
+local_discricao
