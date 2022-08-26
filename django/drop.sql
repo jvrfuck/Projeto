@@ -1,0 +1,2 @@
+-- Active: 1661516372622@@3.89.36.150@3306@pye2122g1
+DROP TABLE IF EXISTS(app1_empresas, app1_pessoas, app1_locais, app1_servicos, app1_horarios,auth_group,auth_permission,auth_group_permissions,auth_user,auth_user_groups, auth_user_user_permissions,django_admin_log, django_content_type, django_migrations, django_session, ursopolar)
