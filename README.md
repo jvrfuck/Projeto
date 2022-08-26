@@ -9,7 +9,7 @@
 
 Logo do Site:  
 
-<img src="Images\LogoAgendai.png">
+<img src="Images/AGENDAI.png">
 
 ### Objetivo
 
@@ -94,3 +94,7 @@ local_id pk FK >- Empresa.empresa_endereco
 local_nome
 local_endereco 
 local_discricao
+
+
+Usuario: joao
+senha: Grupo1Entra21
