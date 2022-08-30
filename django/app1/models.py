@@ -11,7 +11,7 @@ class Pessoas(models.Model):
     pessoa_email = models.CharField(max_length = 100,verbose_name="Email da Pessoa",default=None)
 
     def __str__(self):
-        return '%s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email)
+        return '%s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email, self.pessoa_created, self.ativo,self.pessoa_endereco)
 
     class Meta:
         ordering = ('pessoa_nome','pessoa_endereco')
@@ -34,8 +34,8 @@ class Pessoas_Juridicas(Pessoas):
 
 
 class Pessoas_Fisicas(Pessoas):
-    pf_cpf = models.CharField(max_length = 100,verbose_name="Cpf da Pessoa",default=None)
-    pf_datanascimento = models.DateField(max_length = 100,verbose_name="Datanascimento",default=None)
+    pf_cpf = models.CharField(max_length = 100,verbose_name="CPF da Pessoa",default=None)
+    pf_datanascimento = models.DateField(max_length = 100,verbose_name="Data de Nascimento",default=None)
     pf_fidelidade = models.CharField(max_length = 100,verbose_name="Fidelidade da Pessoa",default=None)
 
     def __str__(self):
