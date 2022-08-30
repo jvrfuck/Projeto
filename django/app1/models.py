@@ -2,44 +2,82 @@ from django.db import models
 
 # Create your models here.
 
-class Empresas (models.Model):
-    empresa_nome = models.CharField(max_length=200,verbose_name="Nome", blank=True)
-    empresa_atividade = models.CharField(max_length=200,verbose_name="Atividade", blank=True)
-    empresa_cnpj = models.CharField(max_length=200,verbose_name="CNPJ", blank=True)
-    empresa_endereco = models.CharField(max_length=200,verbose_name="Endereço", blank=True)
-    empresa_telefone = models.CharField(max_length=200,verbose_name="Telefone", blank=True)
-    empresa_email = models.CharField(max_length=200,verbose_name="E-mail", blank=True)
-    empresa_servico = models.CharField(max_length=200,verbose_name="Serviço", blank=True)
+class Pessoas(models.Model):
+    pessoa_created = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+    ativo = models.CharField(max_length =1,default=None)
+    pessoa_nome = models.CharField(max_length = 100,verbose_name="Nome da Pessoa",default=None)
+    pessoa_telefone = models.CharField(max_length = 100,verbose_name="Telefone da Pessoa",default=None)
+    pessoa_endereco = models.CharField(max_length = 100,verbose_name="Endereco da Pessoa",default=None)
+    pessoa_email = models.CharField(max_length = 100,verbose_name="Email da Pessoa",default=None)
+
+    def __str__(self):
+        return '%s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email)
+
+    class Meta:
+        ordering = ('pessoa_nome','pessoa_endereco')
+        verbose_name = 'Pessoa'
+        verbose_name_plural = 'Pessoas'
 
 
-class Pessoas (models.Model):
-    pessoa_nome = models.CharField(max_length=100,verbose_name="Nome", blank=True)
-    pessoa_cpf = models.CharField(max_length=100,verbose_name="CPF", blank=True)
-    pessoa_nascimento = models.DateField(max_length=20,verbose_name="Data de nascimento", blank=True)
-    pessoa_telefone = models.CharField(max_length=200,verbose_name="Telefone", blank=True)
-    pessoa_email = models.CharField(max_length=200,verbose_name="E-mail", blank=True)
-    pessoa_fidelidade = models.CharField (max_length=200,verbose_name="Fidelidade", blank=True)
+class Pessoas_Juridicas(Pessoas):
+    pj_atividade = models.CharField(max_length = 100,verbose_name="Atividades da empresa",default=None)
+    pj_cnpj = models.CharField(max_length = 100,verbose_name="CNPJ da empresa",default=None)
+    pj_servico = models.CharField(max_length = 100,verbose_name="Servico da empresa",default=None)
+
+    def __str__(self):
+        return '%s %s' % (self.pj_atividade, self.pj_cnpj, self.pj_servico)
+
+    class Meta:
+        ordering = ('pj_atividade',)
+        verbose_name = 'Pessoas_Juridica'
+        verbose_name_plural = 'Pessoas_Juridicas'
 
 
-class Locais (models.Model):
-    local_nome = models.CharField(max_length=200,verbose_name="Nome", blank=True)
-    local_endereco = models.CharField(max_length=200,verbose_name="Endereço", blank=True)
-    local_descricao = models.CharField(max_length=200,verbose_name="Descrição", blank=True)
+class Pessoas_Fisicas(Pessoas):
+    pf_cpf = models.CharField(max_length = 100,verbose_name="Cpf da Pessoa",default=None)
+    pf_datanascimento = models.DateField(max_length = 100,verbose_name="Datanascimento",default=None)
+    pf_fidelidade = models.CharField(max_length = 100,verbose_name="Fidelidade da Pessoa",default=None)
 
+    def __str__(self):
+        return '%s %s' % (self.pf_cpf, self.pf_datanascimento, self.pf_fidelidade)
 
-class Servicos (models.Model):
-    servico_nome = models.CharField(max_length=100, blank=True, verbose_name='Nome')
-    servico_registroClasse = models.CharField(max_length=100, blank=True, verbose_name='registroClasse')
-    servico_descricao = models.CharField(max_length=100, blank=True, verbose_name='descricao')
-    servico_miniCV = models.CharField(max_length=200, blank=True, verbose_name='miniCV')
-    servico_valor = models.FloatField(max_length=50, blank=True, verbose_name='valor')
+    class Meta:
+        ordering = ('pf_cpf','pf_datanascimento')
+        verbose_name = 'Pessoa_Fisica'
+        verbose_name_plural = 'Pessoas_Fisicas'
 
 
 class Horarios(models.Model):
-	horario_empresa = models.CharField(max_length=200,verbose_name="Empresa", blank=True)
-	horario_pessoas = models.CharField(max_length=200,verbose_name="Pessoa", blank=True)
-	horario_local = models.CharField(max_length=200,verbose_name="Local", blank=True)
-	horario_servico = models.CharField(max_length=200,verbose_name="Serviço", blank=True)
-	horario_duracao = models.CharField(max_length=200,verbose_name="Duração", blank=True)
-	horario_inicio = models.CharField(max_length=200,verbose_name="Início", blank=True)
-	horario_tipo = models.CharField(max_length=200,verbose_name="Tipo", blank=True)
+    horarioCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+    ativo = models.CharField(max_length =1,default=None)
+    horario_empresa = models.CharField(max_length = 100,verbose_name="Horario da empresa",default=None)
+    horario_pessoas = models.CharField(max_length = 100,verbose_name="Horario Pessoa",default=None)
+    horario_local = models.CharField(max_length = 100,verbose_name="Horario Local",default=None)
+    horario_servico = models.CharField(max_length = 100,verbose_name="Horario Servico",default=None)
+    horario_duracao = models.DateField(max_length = 100,verbose_name="horario duracao",default=None)
+    horario_inicio = models.DateField(max_length = 100,verbose_name="horario inicio",default=None)
+    horario_tipo = models.CharField(max_length = 100,verbose_name="horario tipo",default=None)  
+
+    def __str__(self):
+        return '%s %s' % (self.horario_empresa, self.horario_pessoas, self.horario_local, self.horario_servico, self.horario_duracao, self.horario_inicio, self.horario_tipo)
+
+    class Meta:
+        ordering = ('horario_servico', 'horario_empresa', 'horario_pessoas')
+        verbose_name = 'Horario'
+        verbose_name_plural = 'Horarios'
+
+class Locais(models.Model):
+    localCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+    ativo = models.CharField(max_length =1,default=None)
+    local_nome = models.CharField(max_length = 100,verbose_name="Nome do Local",default=None)
+    local_endereco = models.CharField(max_length = 100,verbose_name="Endereco do Local",default=None)
+    local_descricao = models.CharField(max_length = 100,verbose_name="Descricao do Local",default=None)   
+
+
+    def __str__(self):
+        return '%s %s' % (self.local_nome, self.local_endereco, self.local_descricao)
+
+    class Meta:
+        ordering = ('local_nome', 'local_endereco', 'local_descricao')
+        verbose_name = 'Local'
+        verbose_name_plural = 'Locais'
