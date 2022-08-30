@@ -11,7 +11,7 @@ class Pessoas(models.Model):
     pessoa_email = models.CharField(max_length = 100,verbose_name="Email da Pessoa",default=None)
 
     def __str__(self):
-        return '%s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email, self.pessoa_created, self.ativo,self.pessoa_endereco)
+        return '%s %s %s %s %s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email, self.pessoa_created, self.ativo, self.pessoa_endereco)
 
     class Meta:
         ordering = ('pessoa_nome','pessoa_endereco')
@@ -25,7 +25,7 @@ class Pessoas_Juridicas(Pessoas):
     pj_servico = models.CharField(max_length = 100,verbose_name="Servico da empresa",default=None)
 
     def __str__(self):
-        return '%s %s' % (self.pj_atividade, self.pj_cnpj, self.pj_servico)
+        return '%s %s %s' % (self.pj_atividade, self.pj_cnpj, self.pj_servico)
 
     class Meta:
         ordering = ('pj_atividade',)
@@ -39,7 +39,7 @@ class Pessoas_Fisicas(Pessoas):
     pf_fidelidade = models.CharField(max_length = 100,verbose_name="Fidelidade da Pessoa",default=None)
 
     def __str__(self):
-        return '%s %s' % (self.pf_cpf, self.pf_datanascimento, self.pf_fidelidade)
+        return '%s %s %s' % (self.pf_cpf, self.pf_datanascimento, self.pf_fidelidade)
 
     class Meta:
         ordering = ('pf_cpf','pf_datanascimento')
@@ -59,7 +59,7 @@ class Horarios(models.Model):
     horario_tipo = models.CharField(max_length = 100,verbose_name="horario tipo",default=None)  
 
     def __str__(self):
-        return '%s %s' % (self.horario_empresa, self.horario_pessoas, self.horario_local, self.horario_servico, self.horario_duracao, self.horario_inicio, self.horario_tipo)
+        return '%s %s %s %s %s %s %s' % (self.horario_empresa, self.horario_pessoas, self.horario_local, self.horario_servico, self.horario_duracao, self.horario_inicio, self.horario_tipo)
 
     class Meta:
         ordering = ('horario_servico', 'horario_empresa', 'horario_pessoas')
@@ -75,7 +75,7 @@ class Locais(models.Model):
 
 
     def __str__(self):
-        return '%s %s' % (self.local_nome, self.local_endereco, self.local_descricao)
+        return '%s %s %s' % (self.local_nome, self.local_endereco, self.local_descricao)
 
     class Meta:
         ordering = ('local_nome', 'local_endereco', 'local_descricao')
