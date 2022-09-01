@@ -84,8 +84,3 @@ class Locais(models.Model):
 
 
 
-
-
-
-
-        
