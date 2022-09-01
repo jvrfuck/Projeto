@@ -81,3 +81,11 @@ class Locais(models.Model):
         ordering = ('local_nome', 'local_endereco', 'local_descricao')
         verbose_name = 'Local'
         verbose_name_plural = 'Locais'
+
+
+
+
+
+
+
+        
