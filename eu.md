@@ -1,9 +1,13 @@
-## Fazer o PIP e incluir no requirements.txt
+<!-- ## Fazer o PIP e incluir no requirements.txt
 pip install django-crispy-forms
-pip freeze > requirements.txt
-## PARTE APP
+pip freeze > requirements.txt -->
+
+<!-- ## PARTE APP
+
 #<<Na pasta templates fazer os corpos do site>>
+
 #<<base.html>>
+
 #nessa primeira aonde tem o dashboard e area1 e etc e onde ficam os nomes dos campos na parte superior
 
 
@@ -89,16 +93,17 @@ pip freeze > requirements.txt
 
 {% endblock %}
 
-#<<Dashboard1.html>>
+#<<Dashboard1.html>> -->
 
+<!-- 
+#<<baixar pasta Static do repositorio do professor>> -->
 
-#<<baixar pasta Static do repositorio do professor>>
-#<<Na pasta views.py adicionar>>
+<!-- #<<Na pasta views.py adicionar>>
 
 from django.contrib.auth.decorators import login_required
 
 <!-- #em cima do Def -->
-@login_required
+<!-- @login_required
 
 #<<Para fazer novas "frontsend", Para isso o nome que sera usado ai em request, deve ser o mesmo que esta na base.html dos templates EX:>>
 
@@ -108,37 +113,37 @@ def db1(request):
     versao = "versao 0.00 de 19/08"
 
     return render(request, 'dashboard.html', 
-        {'dados' : versao}
+        {'dados' : versao} -->
+ -->
 
-
-## na parte do projeto
+<!-- ## na parte do projeto
 
 #<<NA pasta Settings, adicionar>>
 
 INSTALLED_APPS = [
     'accounts',
     'crispy_forms',
-]
-#<no final da pasta>
+] -->
+<!-- #<no final da pasta>
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(STATIC_URL, 'static/')
-
+STATIC_ROOT = os.path.join(STATIC_URL, 'static/') -->
+<!-- 
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/accounts/login'
+LOGOUT_REDIRECT_URL = '/accounts/login' -->
 
-#<se nao tiver feito o DIR nos templates>
-'DIRS': [os.path.join(BASE_DIR, "templates")]
+<!-- #<se nao tiver feito o DIR nos templates>
+'DIRS': [os.path.join(BASE_DIR, "templates")] -->
 
-#<<na pasta Urls>>
-path("accounts/",include("django.contrib.auth.urls")),
+<!-- #<<na pasta Urls>>
+path("accounts/",include("django.contrib.auth.urls")), -->
 
-## CRiar pasta accounts
+<!-- ## CRiar pasta accounts
 
 django-admin startapp accounts
 
-#<<Copiar pasta de templates do repositorio do professor>>
+#<<Copiar pasta de templates do repositorio do professor>> -->
 
-<<na pasta views>>
+<!-- <<na pasta views>>
 
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
@@ -147,9 +152,9 @@ from django.views import generic
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
-    template_name = 'registration/register.html'
+    template_name = 'registration/register.html' -->
 
-#<<Criar pasta URLS>>
+<!-- #<<Criar pasta URLS>>
 
 from django.urls import path
 
@@ -158,4 +163,4 @@ from . import views
 urlpatterns = [
     path("register/", views.SignUp.as_view(),name="register"),
 ]
-
+ -->
