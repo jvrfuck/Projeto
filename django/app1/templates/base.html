@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">By Dados - G2</a>
+            <a class="navbar-brand" href="/">Agendaí</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,21 +22,24 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/db1">DashBoard1</a>
+                        <a class="nav-link" href="/emp">Empresas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/db2">DashBoard2</a>
+                        <a class="nav-link" href="/pes">Pessoas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ag">Agendamento</a>
                     </li>
                     <li class="nav-item">
                             <a class="nav-link" href="/admin">Admin</a>
                         </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/accounts/login">Login</a>
-                    </li>
-                    {% endif %}
+                        <a class="nav-link" href="/sobre">Sobre nós</a>
+                    </li>                    
+                    {% endif %}                    
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Sobre</a>
+                        <a class="nav-link" href="/accounts/login">Criar Conta</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -48,9 +51,13 @@
         </nav>
         {% block content %}
         {% endblock %}
-        <footer>
-            <p>App By Turma G2 do Entra21 em 2022</p>
-        </footer>
+        <div class="row">
+            <div class="col=xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-md-12 col-sm-12 col-xs-12">
+                <footer>
+                    <p><center> Agendaí 2022</center></p>
+                </footer>
+            </div>
+        </div>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.4.0.min.js"

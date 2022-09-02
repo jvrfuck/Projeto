@@ -1,5 +1,18 @@
 .container-fluid {
     padding: 0;
+    position: absolute;
+    width: 123px;
+    height: 48px;
+    left: 25px;
+    top: 19px;
+
+    font-family: 'Lovers Quarrel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+
+    color: #000000;
 }
 
 .container-fluid .row {
@@ -24,6 +37,19 @@
 .navbar-light .navbar-nav a.nav-link {
     color: #333;
     letter-spacing: 1px;
+    position: absolute;
+    width: 123px;
+    height: 48px;
+    left: 25px;
+    top: 19px;
+
+    font-family: 'Lovers Quarrel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+
+    color: #000000;
 }
 
 /* dashboard */
@@ -181,10 +207,15 @@ footer {
 }
 
 footer p {
-    color: #f5f5f5;
+    /* color: #f5f5f5; */
     text-align: center;
     top: 50%;
-    position: relative;
+    position: absolute;
+    width: 941px;
+    height: 56px;
+    left: 0px;
+    top: 589px;
+    background: #D9D9D9;
 }
 
 /* Messages */
@@ -216,10 +247,65 @@ ul.messages li {
 /* login */
 
 .auth-card {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    position: absolute;
+    width: 940px;
+    height: 644px;
 }
 
 .change-form-p {
     margin-top: 30px;
     text-align: center;
+}
+
+/* Agendaí */
+
+.tiulo {
+    position: absolute;
+    width: 168px;
+    height: 59px;
+    left: 127px;
+    top: 260px;
+
+    font-family: 'Signika Negative';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+
+    color: #000000;
+}
+
+.sutitulo {
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    left: 25px;
+    top: 319px;
+
+    font-family: 'Signika Negative';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.logo {
+    position: absolute;
+    width: 123px;
+    height: 48px;
+    left: 25px;
+    top: 19px;
+
+    font-family: 'Lovers Quarrel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 54px;
+
+    color: #000000;
 }

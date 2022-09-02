@@ -13,13 +13,27 @@ def helloworld(request):
     )
 
 @login_required
-def db1(request):
-  data = "Versao 0.01 - Dashboard 1 (um)"
+def emp(request):
+  data = "Versao 0.01 - Cadastro Empresas"
 
-  return render(request, 'dashboard1.html', {'dados': data})
+  return render(request, 'empresas.html', {'dados': data})
 
 @login_required
-def db2(request):
-  data = "ersao 0.01 - Dashboard 2 (dois)"
+def pes(request):
+  data = "Versao 0.01 - Cadastro de Pessoas"
 
-  return render(request, 'dashboard2.html', {'dados': data})
+  return render(request, 'pessoas.html', {'dados': data})
+
+@login_required
+def ag(request):
+  data = "Versao 0.01 - Agendamentos"
+
+  return render(request, 'agendamento.html', {'dados': data})
+
+
+@login_required
+def sobre(request):
+  data = "Versao 0.01 - Sobre"
+
+  return render(request, 'sobre.html', {'dados': data})  
+
