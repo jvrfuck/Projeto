@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .forms import Pessoas_FisicasForm
+from .forms import PessoasForm
 from django.http import HttpResponseRedirect
 from .models import Pessoas, Pessoas_Fisicas
 
@@ -43,31 +43,23 @@ def sobre(request):
 
 
 @login_required
-def pessoasview(request):
-
+def pessoas(request):
     if request.method == 'POST':
-        form = Pessoas_FisicasForm(request.POST)
+        form = PessoasForm(request.POST)
         if form.is_valid():
             nova_pessoa = form.save(commit=False)
-            nova_pessoa.pessoa_nome = form.cleaned_data['pessoa_nome']
-            nova_pessoa.pessoa_telefone = form.cleaned_data['pessoa_telefone']
-            nova_pessoa.pessoa_endereco = form.cleaned_data['pessoa_enderepessoa_datanascimento']
-            nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.ativo = form.cleaned_data['ativo']
+            nova_pessoa.pessoa_nome = form.cleaned_data['pessoa_nome']
             nova_pessoa.pf_cpf = form.cleaned_data['pf_cpf']
             nova_pessoa.pf_datanascimento = form.cleaned_data['pf_datanascimento']
+            nova_pessoa.pessoa_telefone = form.cleaned_data['pessoa_telefone']
+            nova_pessoa.pessoa_endereco = form.cleaned_data['pessoa_endereco']
+            nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.pf_fidelidade = form.cleaned_data['pf_fidelidade']
             nova_pessoa.save()
             return HttpResponseRedirect('/pessoas/')
-    else:   
-        form = Pessoas_FisicasForm()
+    else:
+        form = PessoasForm()
+    pessoas = Pessoas.objects.all()
 
-    pessoas = Pessoas_Fisicas.objects.all()
-
-    return render(request, 'pessoasview.html',
-                  {
-                      'form': form,
-                      'pessoas' : pessoas
-                  }
-
-                  )
+    return render(request, 'pessoas.html', {'form': form, 'pessoas': pessoas})
