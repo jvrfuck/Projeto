@@ -42,9 +42,9 @@ def sobre(request):
    
 @login_required
 def empresas(request):
-    search = request.GET.get('Search')
+    search = request.GET.get('search')
     if search:
-      empresas = Pessoas_Juridicas.objects.filter(empresa_nome__icontains=search)
+      empresas = Pessoas_Juridicas.objects.filter(pessoa_nome__icontains=search)
     else:
       empresas = Pessoas_Juridicas.objects.all()
 
@@ -71,25 +71,32 @@ def empresa_add(request, id=0):
         form = EmpresasForm()
     empresas = Pessoas_Juridicas.objects.all()
 
-    return render(request, 'empresas.html', {'form': form, 'empresas': empresas})
+    return render(request, 'empresa_add.html', {'form': form, 'empresas': empresas})
 
 @login_required
 def empresa_edit(request, id):
-    empresa = get_object_or_404(Pessoas, pk=id)
-    form = PessoasForm(instance=empresa)
+    empresa = get_object_or_404(Pessoas_Juridicas, pk=id)
+    form = EmpresasForm(instance=empresa)
     if ( request.method == 'POST'):
-        form = PessoasForm(request.POST, instance=empresa)
+        form = EmpresasForm(request.POST, instance=empresa)
         if (form.is_valid()):
             empresa.save()
-            return redirect('/pessoas')
+            return redirect('/empresas')
         else:
-            return render(request, 'pessoa_edit.html', {'form': form, 'empresa': empresa})
+            return render(request, 'empresa_edit.html', {'form': form, 'empresa': empresa})
     else:
-        return render(request, 'pessoa_edit.html', {'form': form, 'empresa': empresa})
+        return render(request, 'empresa_edit.html', {'form': form, 'empresa': empresa})
+
+@login_required
+def empresa_delete(request, id):
+    empresa = get_object_or_404(Pessoas_Juridicas, pk=id)
+    empresa.delete()
+    messages.info(request, 'PJ apagado do banco de dados')
+    return redirect('/empresas')
 
 @login_required
 def pessoas(request):
-  search = request.GET.get('Search')
+  search = request.GET.get('search')
   if search:
       pessoas = Pessoas.objects.filter(pessoa_nome__icontains=search)
   else:
