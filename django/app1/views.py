@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .forms import PessoasForm
+from .forms import EmpresasForm, PessoasForm
 from django.http import HttpResponseRedirect
-from .models import Pessoas, Pessoas_Fisicas
+from .models import Pessoas, Pessoas_Fisicas, Pessoas_Juridicas
 
 # Create your views here.
 
@@ -63,3 +63,25 @@ def pessoas(request):
     pessoas = Pessoas.objects.all()
 
     return render(request, 'pessoas.html', {'form': form, 'pessoas': pessoas})
+
+@login_required
+def empresas(request):
+    if request.method == 'POST':
+        form = EmpresasForm(request.POST)
+        if form.is_valid():
+            nova_pessoa = form.save(commit=False)
+            nova_pessoa.ativo = form.cleaned_data['ativo']
+            nova_pessoa.pessoa_nome = form.cleaned_data['pessoa_nome']
+            nova_pessoa.pj_cnpj = form.cleaned_data['pj_cnpj']
+            nova_pessoa.pj_atividade = form.cleaned_data['pj_atividade']
+            nova_pessoa.pessoa_telefone = form.cleaned_data['pessoa_telefone']
+            nova_pessoa.pessoa_endereco = form.cleaned_data['pessoa_endereco']
+            nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
+            nova_pessoa.pj_servico = form.cleaned_data['pj_servico']
+            nova_pessoa.save()
+            return HttpResponseRedirect('/empresas/')
+    else:
+        form = EmpresasForm()
+    empresas = Pessoas_Juridicas.objects.all()
+
+    return render(request, 'empresas.html', {'form': form, 'empresas': empresas})  
