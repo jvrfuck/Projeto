@@ -60,7 +60,7 @@ def pessoas(request):
             return HttpResponseRedirect('/pessoas/')
     else:
         form = PessoasForm()
-    pessoas = Pessoas.objects.all()
+    pessoas = Pessoas_Fisicas.objects.all()
 
     return render(request, 'pessoas.html', {'form': form, 'pessoas': pessoas})
 
