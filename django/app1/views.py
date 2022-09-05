@@ -39,22 +39,20 @@ def sobre(request):
   data = "Versao 0.01 - Sobre"
 
   return render(request, 'sobre.html', {'dados': data})  
-
-
-
-@login_required
-def pessoas(request):
-  search = request.GET.get('Search')
-  if search:
-      pessoas = Pessoas.objects.filter(pessoa_nome__icontains=search)
-  else:
-      pessoas = Pessoas.objects.all()
-
-  return render(request, 'pessoas.html',
-                  {'pessoas': pessoas})    
-
+   
 @login_required
 def empresas(request):
+    search = request.GET.get('Search')
+    if search:
+      empresas = Pessoas_Juridicas.objects.filter(empresa_nome__icontains=search)
+    else:
+      empresas = Pessoas_Juridicas.objects.all()
+
+    return render(request, 'empresas.html',
+                  {'empresas': empresas})  
+
+@login_required
+def empresa_add(request, id=0):
     if request.method == 'POST':
         form = EmpresasForm(request.POST)
         if form.is_valid():
@@ -73,7 +71,32 @@ def empresas(request):
         form = EmpresasForm()
     empresas = Pessoas_Juridicas.objects.all()
 
-    return render(request, 'empresas.html', {'form': form, 'empresas': empresas})  
+    return render(request, 'empresas.html', {'form': form, 'empresas': empresas})
+
+@login_required
+def empresa_edit(request, id):
+    empresa = get_object_or_404(Pessoas, pk=id)
+    form = PessoasForm(instance=empresa)
+    if ( request.method == 'POST'):
+        form = PessoasForm(request.POST, instance=empresa)
+        if (form.is_valid()):
+            empresa.save()
+            return redirect('/pessoas')
+        else:
+            return render(request, 'pessoa_edit.html', {'form': form, 'empresa': empresa})
+    else:
+        return render(request, 'pessoa_edit.html', {'form': form, 'empresa': empresa})
+
+@login_required
+def pessoas(request):
+  search = request.GET.get('Search')
+  if search:
+      pessoas = Pessoas.objects.filter(pessoa_nome__icontains=search)
+  else:
+      pessoas = Pessoas.objects.all()
+
+  return render(request, 'pessoas.html',
+                  {'pessoas': pessoas})
 
 @login_required
 def pessoa_add(request, id=0):
