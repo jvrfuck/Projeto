@@ -143,9 +143,9 @@ def pessoa_edit(request, id):
             pessoa.save()
             return redirect('/pessoas/list')
         else:
-            return render(request, 'pessoas_edit.html', {'form': form, 'pessoa': pessoa})
+            return render(request, 'pessoas/edit.html', {'form': form, 'pessoa': pessoa})
     else:
-        return render(request, 'pessoas_edit.html', {'form': form, 'pessoa': pessoa})
+        return render(request, 'pessoas/edit.html', {'form': form, 'pessoa': pessoa})
 
 @login_required
 def pessoa_delete(request, id):
