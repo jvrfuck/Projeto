@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import EmpresasForm, PessoasForm
 from django.http import HttpResponseRedirect
-from .models import Pessoas, Pessoas_Fisicas, Pessoas_Juridicas
+from .models import Pessoas, Pessoas_Juridicas, Pessoas_Fisicas
 from django.contrib import messages
 # Create your views here.
 
@@ -19,13 +19,13 @@ def helloworld(request):
 def emp(request):
   data = "Versao 0.01 - Cadastro Empresas"
 
-  return render(request, 'empresas.html', {'dados': data})
+  return render(request, 'empresas/list.html', {'dados': data})
 
 @login_required
 def pes(request):
   data = "Versao 0.01 - Cadastro de Pessoas"
 
-  return render(request, 'pessoas.html', {'dados': data})
+  return render(request, 'pessoas/list.html', {'dados': data})
 
 @login_required
 def ag(request):
@@ -48,7 +48,7 @@ def empresas(request):
     else:
       empresas = Pessoas_Juridicas.objects.all()
 
-    return render(request, 'empresas.html',
+    return render(request, 'empresas/list.html',
                   {'empresas': empresas})  
 
 @login_required
@@ -66,12 +66,12 @@ def empresa_add(request, id=0):
             nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.pj_servico = form.cleaned_data['pj_servico']
             nova_pessoa.save()
-            return HttpResponseRedirect('/empresas/')
+            return HttpResponseRedirect('/empresas/list/')
     else:
         form = EmpresasForm()
     empresas = Pessoas_Juridicas.objects.all()
 
-    return render(request, 'empresa_add.html', {'form': form, 'empresas': empresas})
+    return render(request, 'empresas/add.html', {'form': form, 'empresas': empresas})
 
 @login_required
 def empresa_edit(request, id):
@@ -81,18 +81,18 @@ def empresa_edit(request, id):
         form = EmpresasForm(request.POST, instance=empresa)
         if (form.is_valid()):
             empresa.save()
-            return redirect('/empresas')
+            return redirect('/empresas/list')
         else:
-            return render(request, 'empresa_edit.html', {'form': form, 'empresa': empresa})
+            return render(request, 'empresas/edit.html', {'form': form, 'empresa': empresa})
     else:
-        return render(request, 'empresa_edit.html', {'form': form, 'empresa': empresa})
+        return render(request, 'empresas/edit.html', {'form': form, 'empresa': empresa})
 
 @login_required
 def empresa_delete(request, id):
     empresa = get_object_or_404(Pessoas_Juridicas, pk=id)
     empresa.delete()
     messages.info(request, 'PJ apagado do banco de dados')
-    return redirect('/empresas')
+    return redirect('/empresas/list')
 
 @login_required
 def pessoas(request):
@@ -102,7 +102,7 @@ def pessoas(request):
   else:
       pessoas = Pessoas.objects.all()
 
-  return render(request, 'pessoas.html',
+  return render(request, 'pessoas/list.html',
                   {'pessoas': pessoas})
 
 @login_required
@@ -120,13 +120,13 @@ def pessoa_add(request, id=0):
             nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.pf_fidelidade = form.cleaned_data['pf_fidelidade']
             nova_pessoa.save()
-            return HttpResponseRedirect('/pessoas')
+            return HttpResponseRedirect('/pessoas/list')
     else:
         form = PessoasForm()
         
     pessoas = Pessoas.objects.all()
 
-    return render(request, 'pessoa_add.html',
+    return render(request, 'pessoas/add.html',
                     {
                         'form': form,
                         'pessoas': pessoas
@@ -141,15 +141,15 @@ def pessoa_edit(request, id):
         form = PessoasForm(request.POST, instance=pessoa)
         if (form.is_valid()):
             pessoa.save()
-            return redirect('/pessoas')
+            return redirect('/pessoas/list')
         else:
-            return render(request, 'pessoa_edit.html', {'form': form, 'pessoa': pessoa})
+            return render(request, 'pessoas_edit.html', {'form': form, 'pessoa': pessoa})
     else:
-        return render(request, 'pessoa_edit.html', {'form': form, 'pessoa': pessoa})
+        return render(request, 'pessoas_edit.html', {'form': form, 'pessoa': pessoa})
 
 @login_required
 def pessoa_delete(request, id):
     pessoa = get_object_or_404(Pessoas, pk=id)
     pessoa.delete()
     messages.info(request, 'Pessoa apagado do banco de dados')
-    return redirect('/pessoas')
+    return redirect('/pessoas/list')
