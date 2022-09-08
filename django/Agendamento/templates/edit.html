@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}{{empresa.pessoa_nome}}{% endblock %}
+{% block title %}{{empresas.pessoa_nome}}{% endblock %}
 
 {% block content %}
 <div class="offset-1 col-10 list-div">
-    <h1>Editando {{empresa.pessoa_nome}} </h1>
+    <h1>Editando Agendamento </h1>
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}

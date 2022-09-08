@@ -4,7 +4,7 @@ from django.db import models
 
 class Pessoas(models.Model):
     pessoa_created = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
-    ativo = models.CharField(max_length =1,default=None)
+    ativo = models.CharField(max_length =1,default="S")
     pessoa_nome = models.CharField(max_length = 100,verbose_name="Nome da Pessoa",default=None)
     pessoa_telefone = models.CharField(max_length = 100,verbose_name="Telefone da Pessoa",default=None)
     pessoa_endereco = models.CharField(max_length = 100,verbose_name="Endereco da Pessoa",default=None)
@@ -49,7 +49,7 @@ class Pessoas_Fisicas(Pessoas):
 
 class Horarios(models.Model):
     horarioCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
-    ativo = models.CharField(max_length =1,default=None)
+    ativo = models.CharField(max_length =1,default="S")
     horario_empresa = models.CharField(max_length = 100,verbose_name="Horario da empresa",default=None)
     horario_pessoas = models.CharField(max_length = 100,verbose_name="Horario Pessoa",default=None)
     horario_local = models.CharField(max_length = 100,verbose_name="Horario Local",default=None)
@@ -82,5 +82,16 @@ class Locais(models.Model):
         verbose_name = 'Local'
         verbose_name_plural = 'Locais'
 
+class Agendamento(models.Model):
+    agendamentoCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+
+
+    def __str__(self):
+        return ''
+
+    class Meta:
+        ordering = ()
+        verbose_name = "Agendamento"
+        verbose_name_plural ="Agendamentos"
 
 
