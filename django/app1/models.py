@@ -1,6 +1,10 @@
 from django.db import models
-
+import uuid
 # Create your models here.
+
+def upload_image_formater(instance, filename):
+    return f"{str(uuid.uuid4())}.{filename})"
+
 
 class Pessoas(models.Model):
     pessoa_created = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
@@ -9,6 +13,8 @@ class Pessoas(models.Model):
     pessoa_telefone = models.CharField(max_length = 100,verbose_name="Telefone da Pessoa",default=None)
     pessoa_endereco = models.CharField(max_length = 100,verbose_name="Endereco da Pessoa",default=None)
     pessoa_email = models.CharField(max_length = 100,verbose_name="Email da Pessoa",default=None)
+    pessoa_imagem = models.ImageField(upload_image_formater, default=None, blank=True, null=True)
+    # pessoa_senha =  models.CharField(max_length = 100,verbose_name="Senha da Pessoa",default='Senha', blank=False, null=False)
 
     def __str__(self):
         return '%s %s %s %s %s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email, self.pessoa_created, self.ativo, self.pessoa_endereco)
@@ -82,8 +88,8 @@ class Locais(models.Model):
         verbose_name = 'Local'
         verbose_name_plural = 'Locais'
 
-class Agendamento(models.Model):
-    agendamentoCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+class Calendario(models.Model):
+    CalendarioCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
 
 
     def __str__(self):
@@ -91,7 +97,7 @@ class Agendamento(models.Model):
 
     class Meta:
         ordering = ()
-        verbose_name = "Agendamento"
-        verbose_name_plural ="Agendamentos"
+        verbose_name = "Calendario"
+        verbose_name_plural ="Calendarios"
 
 
