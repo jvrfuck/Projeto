@@ -57,7 +57,7 @@ def empresa_add(request, id=0):
         form = EmpresasForm(request.POST)
         if form.is_valid():
             nova_pessoa = form.save(commit=False)
-            nova_pessoa.ativo = form.cleaned_data['ativo']
+            # nova_pessoa.ativo = form.cleaned_data['ativo']
             nova_pessoa.pessoa_nome = form.cleaned_data['pessoa_nome']
             nova_pessoa.pj_cnpj = form.cleaned_data['pj_cnpj']
             nova_pessoa.pj_atividade = form.cleaned_data['pj_atividade']
@@ -111,7 +111,7 @@ def pessoa_add(request, id=0):
         form = PessoasForm(request.POST)
         if form.is_valid():
             nova_pessoa = form.save(commit=False)
-            nova_pessoa.ativo = form.cleaned_data['ativo']
+            # nova_pessoa.ativo = form.cleaned_data['ativo']
             nova_pessoa.pessoa_nome = form.cleaned_data['pessoa_nome']
             nova_pessoa.pf_cpf = form.cleaned_data['pf_cpf']
             nova_pessoa.pf_datanascimento = form.cleaned_data['pf_datanascimento']
