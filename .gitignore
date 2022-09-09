@@ -131,3 +131,4 @@ dmypy.json
 # by prof
 2022.lock
 .lock
+django/app1/templates/empresas.html
