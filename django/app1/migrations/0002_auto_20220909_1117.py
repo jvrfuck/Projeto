@@ -30,7 +30,7 @@ def remove_empresa():
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app1', '0002_calendario_pessoas_pessoa_imagem_and_more'),
+        ('app1', '0001_initial'),
     ]
 
     operations = [
