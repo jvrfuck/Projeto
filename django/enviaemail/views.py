@@ -13,7 +13,7 @@ def envia_email(request):
 
     html_content = render_to_string('email/cadastro_confirmado.html')
     text_content = strip_tags(html_content)
-    email = EmailMultiAlternatives('Cadastro confirmado',text_content,settings.EMAIL_HOST_USER,['forwest3@gmail.com'])
+    email = EmailMultiAlternatives('Cadastro confirmado',text_content,settings.EMAIL_HOST_USER,['agendaieletronica@gmail.com'])
     email.attach_alternative(html_content, 'text/html')
     email.send()
 
