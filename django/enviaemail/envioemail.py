@@ -16,8 +16,8 @@ destinatario = cur.fetchone()
 
 
 # Define email sender and receiver
-email_sender = "forwest3@gmail.com"
-email_password = "tuhtafzagugwhsvi"
+email_sender = "agendaieletronica@gmail.com"
+email_password = "comyryethrahyexh"
 email_receiver = destinatario
 
 # Set the subject and body of the email
