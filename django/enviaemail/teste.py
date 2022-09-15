@@ -16,14 +16,16 @@ destinatario = cur.fetchone()
 
 
 # Define email sender and receiver
-email_sender = "forwest3@gmail.com"
-email_password = "tuhtafzagugwhsvi"
+email_sender = "agendaieletronica@gmail.com"
+email_password = "comyryethrahyexh"
 email_receiver = destinatario
 
 # Set the subject and body of the email
-subject = 'Check out my new video!'
+subject = 'Cadastro Confirmad0'
 body = """
-I've just published a new video on YouTube: https://youtu.be/2cZzP9DLlkg
+
+PARABÉNS, SEU CADASTRO FOI REALIZADO COM SUCESSO!
+
 """
 
 em = EmailMessage()
