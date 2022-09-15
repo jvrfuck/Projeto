@@ -27,21 +27,28 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["192.168.0.114","192.168.1.104","192.168.25.7","192.168.0.102","127.0.0.1"]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'app1',
     'Calendario',
-    'accounts',
-    'crispy_forms'
+    'crispy_forms',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -95,6 +102,11 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -131,19 +143,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/accounts/login'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'  
+LOGIN_REDIRECT_URL = '/admin/' 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "forwest3@gmail.com"
-EMAIL_HOST_PASSWORD = "tuhtafzagugwhsvi"
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "forwest3@gmail.com"
+# EMAIL_HOST_PASSWORD = "tuhtafzagugwhsvi"
