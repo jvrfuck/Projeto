@@ -21,7 +21,7 @@ email_password = "comyryethrahyexh"
 email_receiver = destinatario
 
 # Set the subject and body of the email
-subject = 'Cadastro Confirmad0'
+subject = 'Cadastro Confirmado'
 body = """
 
 PARABÉNS, SEU CADASTRO FOI REALIZADO COM SUCESSO!
