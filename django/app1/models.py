@@ -100,4 +100,3 @@ class Calendario(models.Model):
         verbose_name = "Calendario"
         verbose_name_plural ="Calendarios"
 
-

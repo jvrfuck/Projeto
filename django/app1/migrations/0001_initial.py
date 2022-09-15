@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('horarioCreated', models.DateTimeField(auto_now_add=True, verbose_name='TimeStamp')),
-                ('ativo', models.CharField(default=None, max_length=1)),
+                ('ativo', models.CharField(default='S', max_length=1)),
                 ('horario_empresa', models.CharField(default=None, max_length=100, verbose_name='Horario da empresa')),
                 ('horario_pessoas', models.CharField(default=None, max_length=100, verbose_name='Horario Pessoa')),
                 ('horario_local', models.CharField(default=None, max_length=100, verbose_name='Horario Local')),
@@ -53,11 +53,13 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('pessoa_created', models.DateTimeField(auto_now_add=True, verbose_name='TimeStamp')),
-                ('ativo', models.CharField(default=None, max_length=1)),
+                ('ativo', models.CharField(default='S', max_length=1)),
                 ('pessoa_nome', models.CharField(default=None, max_length=100, verbose_name='Nome da Pessoa')),
                 ('pessoa_telefone', models.CharField(default=None, max_length=100, verbose_name='Telefone da Pessoa')),
                 ('pessoa_endereco', models.CharField(default=None, max_length=100, verbose_name='Endereco da Pessoa')),
                 ('pessoa_email', models.CharField(default=None, max_length=100, verbose_name='Email da Pessoa')),
+                ('pessoa_senha', models.CharField(default='Senha', max_length=100, verbose_name='Senha da Pessoa')),
+                ('pessoa_imagem', models.ImageField(blank=True, default=None, null=True, upload_to='', verbose_name='Imagem')),
             ],
             options={
                 'verbose_name': 'Pessoa',
@@ -94,5 +96,17 @@ class Migration(migrations.Migration):
                 'ordering': ('pj_atividade',),
             },
             bases=('app1.pessoas',),
+        ),
+        migrations.CreateModel(
+            name='Calendario',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('CalendarioCreated', models.DateTimeField(auto_now_add=True, verbose_name='TimeStamp')),
+            ],
+            options={
+                'verbose_name': 'Calendario',
+                'verbose_name_plural': 'Calendarios',
+                'ordering': (),
+            },
         ),
     ]
