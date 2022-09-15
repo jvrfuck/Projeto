@@ -1,20 +1,13 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.core.mail import send_mail
-from django.core.mail import EmailMultiAlternatives
-from django.template.loader import render_to_string
-from django.utils.html import strip_tags
-from django.conf import settings
+from django.core.mail import send_mail 
+from django.conf import settings, redirect
 
 
 # Create your views here.
+def email(request):
+    subject = 'Thank you for registering to our site'
+    message = ' it  means a world to us '
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['c.nardino3@gmail.com',]
+    send_mail( subject, message, email_from, recipient_list )
 
-def envia_email(request):
-
-    html_content = render_to_string('email/cadastro_confirmado.html')
-    text_content = strip_tags(html_content)
-    email = EmailMultiAlternatives('Cadastro confirmado',text_content,settings.EMAIL_HOST_USER,['agendaieletronica@gmail.com'])
-    email.attach_alternative(html_content, 'text/html')
-    email.send()
-
-    return HttpResponse('olá')
+    return redirect ('/accounts/login')
