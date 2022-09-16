@@ -2,13 +2,13 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Account Connections" %}{% endblock %}
+{% block head_title %}{% trans "Contas conectadas " %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Account Connections" %}</h1>
+<h1>{% trans "Contas conectadas" %}</h1>
 
 {% if form.accounts %}
-<p>{% blocktrans %}You can sign in to your account using any of the following third party accounts:{% endblocktrans %}</p>
+<p>{% blocktrans %} Você pode fazer login em sua conta usando qualquer uma das seguintes metodos :{% endblocktrans %}</p>
 
 
 <form method="post" action="{% url 'socialaccount_connections' %}">
@@ -40,10 +40,10 @@
 </form>
 
 {% else %}
-<p>{% trans 'You currently have no social network accounts connected to this account.' %}</p>
+<p>{% trans 'No momento, você não tem contas de redes sociais vinculadas a esta conta.' %}</p>
 {% endif %}
 
-<h2>{% trans 'Add a 3rd Party Account' %}</h2>
+<h2>{% trans 'Registre-se atraves de uma conta de rede social ' %}</h2>
 
 <ul class="socialaccount_providers">
 {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
