@@ -26,18 +26,6 @@
         {% if user.is_authenticated %}
         <li><a href="{% url 'account_email' %}">Mudar E-mail</a></li>
         <li><a href="{% url 'account_logout' %}">Sair</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="/empresas/list">Empresas</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/pessoas/list">Pessoas</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/ag">Agendamento</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin">Admin</a>
-        </li>                       
         {% else %}
         <li><a href="{% url 'account_login' %}">Entrar</a></li>
         <li><a href="{% url 'account_signup' %}">Inscreva-se</a></li>
