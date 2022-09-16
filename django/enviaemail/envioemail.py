@@ -21,9 +21,9 @@ email_password = "comyryethrahyexh"
 email_receiver = destinatario
 
 # Set the subject and body of the email
-subject = 'Check out my new video!'
+subject = 'olhe seu NOVO AGENDAMENTO'
 body = """
-I've just published a new video on YouTube: https://youtu.be/2cZzP9DLlkg
+
 """
 
 em = EmailMessage()
