@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <title>{% block head_title %}{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
   </head>
   <body>
+    
     {% block body %}
 
     {% if messages %}
@@ -23,8 +24,8 @@
       <strong>Menu:</strong>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        <li><a href="{% url 'account_email' %}">Mudar E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}">Sair</a></li>
         <li class="nav-item">
           <a class="nav-link" href="/empresas/list">Empresas</a>
         </li>
@@ -38,8 +39,8 @@
             <a class="nav-link" href="/admin">Admin</a>
         </li>                       
         {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}">Entrar</a></li>
+        <li><a href="{% url 'account_signup' %}">Inscreva-se</a></li>
         <!-- <li class="nav-item">
             <a class="nav-link" href="/sobre">Sobre nós</a>
         </li>  -->
@@ -51,5 +52,6 @@
     {% endblock %}
     {% block extra_body %}
     {% endblock %}
-  </body>
+</body>
+
 </html>
