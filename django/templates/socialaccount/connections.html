@@ -8,7 +8,7 @@
 <h1>{% trans "Contas conectadas" %}</h1>
 
 {% if form.accounts %}
-<p>{% blocktrans %} Você pode fazer login em sua conta usando qualquer uma das seguintes metodos :{% endblocktrans %}</p>
+<p>{% blocktrans %} Você pode fazer login em sua conta usando um dos seguintes métodos :{% endblocktrans %}</p>
 
 
 <form method="post" action="{% url 'socialaccount_connections' %}">
@@ -43,7 +43,7 @@
 <p>{% trans 'No momento, você não tem contas de redes sociais vinculadas a esta conta.' %}</p>
 {% endif %}
 
-<h2>{% trans 'Registre-se atraves de uma conta de rede social ' %}</h2>
+<h2>{% trans 'Registre-se através de uma conta de rede social ' %}</h2>
 
 <ul class="socialaccount_providers">
 {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
