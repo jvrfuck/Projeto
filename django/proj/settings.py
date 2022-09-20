@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-55g=e*(lrr4+g_5sctos&&wdx&)b3zedc72*)z@t^%7%2f-$ru'
+SECRET_KEY = config("SK")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,10 +96,10 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'pye2122g1',
-        'USER': 'pye2122g1',
-        'PASSWORD': 'pye2122g1@25@ago',
-        'HOST': '3.89.36.150',
+        'NAME': config("DBNAME"),
+        'USER': config("DBNAME"),
+        'PASSWORD': config("DBPASSWORD"),
+        'HOST': config("DBHOST"),
         'PORT': '3306',
     }
 }
@@ -159,5 +160,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "agendaieletronica@gmail.com"
-EMAIL_HOST_PASSWORD = "comyryethrahyexh"
+EMAIL_HOST_USER = config("EADDRESS")
+EMAIL_HOST_PASSWORD = config("EPASSWORD")
