@@ -6,7 +6,7 @@ from .models import Pessoas, Pessoas_Juridicas, Pessoas_Fisicas
 from django.contrib import messages
 # Create your views here.
 
-@login_required
+
 def helloworld(request):
 
     versao = "Versão 0.00 de 25/08/2022 09:00"
