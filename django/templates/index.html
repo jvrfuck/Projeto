@@ -8,6 +8,63 @@
                 <h4 class="card-title text-center">Agendaí</h4>   
                 <h6 class="card-title text-center">Esse site é de aprendizado da turma de Python </h6>   
                    
+                <section id="contact" class="card m-4 p-4">
+                    <div class="container">
+                        <div class="row text-center">
+                          
+                            <div class="col-sm-6">
+                            <div class="contact-detail-box">
+                              <i class="far fa-envelope text-colored fa-3x"></i>
+                              <h4>Entre em Contato</h4>
+                              <!-- <abbr title="Telefone">Telefone:</abbr> (048) 9999-9999<br> -->
+                              E: <a href="mailto:agendaieletronica@gmail.com" class="text-muted">agendaieletronica@gmail.com</a>
+                            </div>
+                          </div><!-- end col -->
+                  
+                  
+                  
+                  
+                        </div>
+                        <!-- end row -->
+                  
+                
+                 
+                          <!-- Contact form -->
+                          <div class="col-sm-6">
+                            <form role="form" name="ajax-form" id="ajax-form" method="post" class="form-main" action="{% url 'home'%}">
+                            {% csrf_token %}
+                              <div class="form-group">
+                                <label for="name2">Seu Nome</label>
+                                <input class="form-control" id="name2" name="name" type="text" placeholder="nome">
+                                <div class="error" id="err-name" style="display: none;">Please enter name</div>
+                              </div> <!-- /Form-name -->
+                  
+                              <div class="form-group">
+                                <label for="email2">Email</label>
+                                <input class="form-control" id="email2" name="email" type="text" placeholder="email">
+                                <div class="error" id="err-emailvld" style="display: none;">E-mail is not a valid format</div> 
+                              </div> <!-- /Form-email -->
+                  
+                              <div class="form-group">
+                                <label for="message2">Mensagem</label>
+                                <textarea class="form-control" id="message2" name="mensagem" rows="5" placeholder="mensagem"></textarea>
+                  
+                                <div class="error" id="err-message" style="display: none;">Por favor digite sua mensagem</div>
+                              </div> <!-- /col -->
+                  
+                              <div class="row">            
+                                  <button type="submit" class="btn btn-primary btn-shadow btn-rounded w-md" id="send">Enviar</button>
+                                </div> <!-- /col -->
+                              </div> <!-- /row -->
+                  
+                            </form> <!-- /form -->
+                          </div> <!-- end col -->
+                  
+                        </div> <!-- end row -->
+                            
+                      </div>
+                </section>
+                
                     {% csrf_token %}  
                   
 
