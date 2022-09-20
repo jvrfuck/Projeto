@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'app1',
     'Calendario',
     'crispy_forms',
+    'enviaemail'
 ]
 
 SITE_ID = 1
