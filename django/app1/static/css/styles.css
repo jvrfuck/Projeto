@@ -258,54 +258,69 @@ ul.messages li {
     text-align: center;
 }
 
-/* Agendaí */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap%27');
 
-.tiulo {
-    position: absolute;
-    width: 168px;
-    height: 59px;
-    left: 127px;
-    top: 260px;
-
-    font-family: 'Signika Negative';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 59px;
-
-    color: #000000;
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #f3f1f1 16.62%, #d33d5e 85.61%);
 }
 
-.sutitulo {
-    position: absolute;
-    width: 400px;
-    height: 30px;
-    left: 25px;
-    top: 319px;
-
-    font-family: 'Signika Negative';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    /* identical to box height */
-
-
-    color: #000000;
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
 }
 
-.logo {
-    position: absolute;
-    width: 123px;
+.cabecalho-logo{
     height: 48px;
-    left: 25px;
-    top: 19px;
+}
 
-    font-family: 'Lovers Quarrel';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 54px;
+.cabecalho-menu{
+    display: flex;
+    gap: 32px;
+    color:aliceblue;
+    font-weight: 400px;
+    font-size: 16px;
+    font-family: 'Signika Negative', sans-serif;
+}
 
-    color: #000000;
+.conteudo{
+    border-top: 0,4px solid rgb(250, 250, 250);
+    margin-bottom: 48px;
+}
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-escrito{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-titulo{
+    font-family: 'Signika Negative', sans-serif;
+    font-size:48px ;
+    font-weight: 400px;
+    color:#1c0e1c;
+    align-items: center;
+}
+
+.conteudo-subtitulo{
+    font-family: 'Signika Negative', sans-serif;
+    font-size:24px ;
+    font-weight: 400px;
+    color:#1c0e1c
+}
+
+footer {
+    background: linear-gradient(68.15deg, #f3f1f1 16.62%, #d33d5e 85.61%);
+    height: 100px;
+    border-top: 1px solid #202020;
 }

@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Lista de Tags{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col">
-                <h4 class="card-title text-center">Agendaí</h4>   
+      <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-escrito">
+                <h1 class="conteudo-titulo">Agendaí</h1>
+                <h2 class="conteudo-subtitulo">Sua central de agendamentos esta aqui!</h2>
+            </div>
+            <img class="conteudo-imagem" src="{% static 'imagens/Line 1.png' %}">
+
                 <h6 class="card-title text-center">Esse site é de aprendizado da turma de Python </h6>   
-                   
+                  
+
                 <section id="contact" class="card m-4 p-4">
                     <div class="container">
                         <div class="row text-center">
@@ -20,9 +28,6 @@
                               E: <a href="mailto:agendaieletronica@gmail.com" class="text-muted">agendaieletronica@gmail.com</a>
                             </div>
                           </div><!-- end col -->
-                  
-                  
-                  
                   
                         </div>
                         <!-- end row -->
