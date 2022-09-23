@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -46,7 +47,8 @@ INSTALLED_APPS = [
     'app1',
     'Calendario',
     'crispy_forms',
-    'enviaemail'
+    'enviaemail',
+    'Agendai_app'
 ]
 
 SITE_ID = 1
@@ -82,13 +84,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'proj.wsgi.application'
 
-try:
-    DATABASE_URL = os.getenv('DATABASE_URL')
-except ImportError:
-    pass
+# try:
+#     DATABASE_URL = os.getenv('DATABASE_URL')
+# except ImportError:
+#     pass
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': config("DBNAME"),
+        'USER': config("DBNAME"),
+        'PASSWORD': config("DBPASSWORD"),
+        'HOST': config("DBHOST"),
+        'PORT': '3306',
+    }
+}
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
