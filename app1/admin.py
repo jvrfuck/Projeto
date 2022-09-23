@@ -1,7 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
-
 from .models import Pessoas
 from .models import Pessoas_Fisicas
 from .models import Locais

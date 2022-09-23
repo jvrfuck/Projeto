@@ -33,7 +33,6 @@ def ag(request):
 
   return render(request, 'agendamento.html', {'dados': data})
 
-
 @login_required
 def sobre(request):
   data = "Versao 0.01 - Sobre"
