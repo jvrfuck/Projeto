@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Pessoas{% endblock %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
 <div class="offset-1 col-15 list-div">
     <h1>Lista de Pessoas</h1>
     <div class="container dashboard">        

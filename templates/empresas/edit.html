@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{empresa.pessoa_nome}}{% endblock %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
 <div class="offset-1 col-10 list-div">
     <h1>Editando {{empresa.pessoa_nome}} </h1>
     <form method="POST">
