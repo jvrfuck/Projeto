@@ -27,7 +27,7 @@ body{
 }
 
 .conteudo{
-    border-top: 0,4px solid rgb(250, 250, 250);
+    border-top: 0,4px solid #00BCD4;
     margin-bottom: 48px;
 }
 
@@ -58,7 +58,12 @@ body{
     font-weight: 400px;
     color:#1c0e1c
 }
-
+.conteudo-imagem-mulher{
+  max-width:1000px;
+  max-height:650px;
+  width: auto;
+  height: auto;
+}
 footer {
     background: linear-gradient(68.15deg, #f3f1f1 16.62%, #d33d5e 85.61%);
     height: 100px;
@@ -511,4 +516,61 @@ footer {
     .blog-detail-box {
     padding-right: 0px;
   }
+
   }
+  .card {
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+        border: none !important;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .blue-text {
+        color: #00BCD4
+    }
+
+    .form-control-label {
+        margin-bottom: 0
+    }
+
+    input,
+    textarea,
+    button {
+        padding: 8px 15px;
+        border-radius: 5px !important;
+        margin: 5px 0px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        font-size: 18px !important;
+        font-weight: 300
+    }
+
+    input:focus,
+    textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #00BCD4;
+        outline-width: 0;
+        font-weight: 400
+    }
+
+    .btn-block {
+        text-transform: uppercase;
+        font-size: 15px !important;
+        font-weight: 400;
+        height: 43px;
+        cursor: pointer
+    }
+
+    .btn-block:hover {
+        color: #fff !important
+    }
+
+    button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0
+    }

@@ -6,24 +6,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"/>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
   <title>Agendaí</title>
 </head>
-<style>
-
-</style>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img class="logo" src="{% static 'imagens/Agendaí.png' %}">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <main class="conteudo">
+        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+            <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/Agendaí.png' %}"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="/empresas/list">Empresas</a>
@@ -37,28 +35,41 @@
                     <li class="nav-item">
                             <a class="nav-link" href="/admin">Admin</a>
                         </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/sobre">Sobre nós</a>
-                    </li>  
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/sobre">Sobre nós</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="#team">Sobre Nós</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/accounts/login">Entrar/Cadastrar</a>
-                    </li>                    
-                    {% endif %}  
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                            <a class="nav-link" href="/accounts/logout">Sair </a>
-                    </li>
-                    {% endif %}
+                  </a>
+                  <span class="badge badge-danger">{{count}}</span>
+                </li>
+                {% else %}
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="#team">Sobre Nós</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="#services">Empresas Parceiras</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="#contact">Contatos</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="/accounts/login">Entrar/Cadastrar</a>
+                </li>        
+                {% endif %}  
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                        <a class="nav-link" href="/accounts/logout">Sair </a>
+                </li>
+                {% endif %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
                 </ul>
             </div>
         </nav>
+    </main>
         {% block content %}
         {% endblock %}
-        <div class="row mt-5">
+        <div class="row mt-10">
             <div class="col=xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-md-12 col-sm-12 col-xs-12">
                 <footer>
                     <p><center> <img class="rodape-imagem" src="{% static 'imagens/Agendaí 2022.png' %}"></center></p>

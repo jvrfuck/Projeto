@@ -14,18 +14,12 @@
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 
-<style>
-    {% block style %}{% endblock style %}
-</style>
-
 <body>
 
-  <div class="header" style="
-    background: rgb(177, 177, 177) url('../static/img/header.png') no-repeat fixed center
+  <div class="header">
   {% if "appointment" in request.path %}
   max-height:300px!important;min-height:300px!important;
-  {% endif %}  
-  ">
+  {% endif %} 
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
         <div class="container"><a class="navbar-brand" href="{% url 'home' %}">Agendaí</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
@@ -75,9 +69,6 @@
 
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
  
- <script>
-    {% block script %}{% endblock script %}
- </script>
 </body>
 
 </html>
