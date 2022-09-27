@@ -31,7 +31,7 @@ def pes(request):
 def ag(request):
   data = "Versao 0.01 - Agendamentos"
 
-  return render(request, 'agendamento.html', {'dados': data})
+  return render(request, 'agendamentos/agendamento.html', {'dados': data})
 
 @login_required
 def sobre(request):

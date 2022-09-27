@@ -32,7 +32,7 @@ class HomeTemplateView(TemplateView):
 
 
 class AgendamentoTemplateView(TemplateView):
-    template_name = "agendamento.html"
+    template_name = "agendamentos/agendamento.html"
 
 
     def post(self, request):
@@ -57,7 +57,7 @@ class AgendamentoTemplateView(TemplateView):
 
 
 class GerenciamentoAgendamentoTemplateView(ListView):
-    template_name = "gerenciamento-agendamento.html"
+    template_name = "agendamentos/gerenciamento-agendamento.html"
     model = Agendamento
     context_object_name = "appointments"
     login_required = True
