@@ -76,7 +76,7 @@ class GerenciamentoAgendamentoTemplateView(ListView):
             "date":date,
         }
 
-        message = get_template('email.html').render(data)
+        message = get_template('agendamentos/email.html').render(data)
         email = EmailMessage(
             "Sobre o seu agendamento",
             message,

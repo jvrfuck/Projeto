@@ -1,6 +1,6 @@
-from django.contrib import admin
-from Calendario.models import Event
+# from django.contrib import admin
+# from Calendario.models import Event
 
 # Register your models here.
 
-admin.site.register(Event)
+# admin.site.register(Event)

@@ -3,8 +3,9 @@
 {% block title %}Lista de Tags{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col">
+<div class="container">
+  <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-12">
         <section class="conteudo-principal">
             <div class="conteudo-escrito">
                 <h1 class="conteudo-titulo">Agendaí</h1>
@@ -12,8 +13,11 @@
                 <h3 class="conteudo-subtitulo">Esse é um site para aprendizado de Python e Django</h3>
             </div>
             <!-- <img class="conteudo-imagem" src="{% static 'imagens/Line 1.png' %}"> -->
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12">
             <img class="conteudo-imagem-mulher" src="{% static 'imagens/mulher.png' %}">
           </div> 
+          </div>
           </section>      
             
             <!-- Team item -->
@@ -28,8 +32,9 @@
           
               <div class="container">
                   <div class="row text-center">
-        
-                      <div class="col-xl-3 col-sm-6 mb-5">
+
+                    <div class="row">
+                      <div class="col-lg-2 col-md-8 col-sm-12">
                           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{% static 'img/clayson 1.png' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                               <h5 class="mb-0">Clayson Nardino</h5>
                               <span class="small text-uppercase text-muted">c.nardino3@gmail.com </span>
@@ -38,7 +43,7 @@
                       </div><!-- End -->
           
                 
-                      <div class="col-xl-3 col-sm-6 mb-5">
+                      <div class="col-lg-2 col-md-8 col-sm-12">
                           <div  class="bg-white rounded shadow-sm py-5 px-4"><img  src="{% static 'img/douglas 1.png' %}" alt="" class=" mh-100 rounded-circle mb-3 img-thumbnail shadow-sm">
                               <h5 class="mb-0">Douglas Bitencourt </h5>
                               <span class="small text-uppercase text-muted">douglasbitencourtadm@gmail.com</span>
@@ -47,7 +52,7 @@
                       </div><!-- End -->
           
                       <!-- Team item -->
-                      <div class="col-xl-3 col-sm-6 mb-5">
+                      <div class="col-lg-2 col-md-8 col-sm-12">
                           <div  class="bg-white rounded shadow-sm py-5 px-4"><img  src="{% static 'img/jessica 1.jpg' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                               <h5 class="mb-0">Jéssica Maros</h5>
                               <span class="small text-uppercase text-muted">jessicatmaros@gmail.com</span>
@@ -56,7 +61,7 @@
                       </div><!-- End -->
           
                       <!-- Team item -->
-                      <div class="col-xl-3 col-sm-6 mb-5">
+                      <div class="col-lg-2 col-md-8 col-sm-12">
                           <div  class="bg-white rounded shadow-sm py-5 px-4"><img  src="{% static 'img/joao.jpg' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                               <h5 class="mb-0">João Fuck</h5>
                               <span class="small text-uppercase text-muted">jv-rf@hotmail.com</span>
@@ -65,7 +70,7 @@
                       </div><!-- End -->
 
                        <!-- Team item -->
-                       <div class="col-xl-3 col-sm-6 mb-5">
+                       <div class="col-lg-2 col-md-8 col-sm-12">
                         <div  class="bg-white rounded shadow-sm py-5 px-4"><img  src="{% static 'img/rogerio.jpg' %}" alt="" class=" mh-100img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                             <h5 class="mb-0">Rogério Hanke</h5>
                             <span class="small text-uppercase text-muted">rogeriohanke@gmail.com</span>
@@ -81,7 +86,7 @@
                     <div class="container">
                         <div class="row text-center">
                           
-                            <div class="col-sm-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="contact-detail-box">
                               <i class="far fa-envelope text-colored fa-3x"></i>
                               <h4>Entre em Contato</h4>
@@ -96,7 +101,7 @@
                 
                  
                           <!-- Contact form -->
-                          <div class="col-sm-6">
+                          <div class="col-lg-12 col-md-12 col-sm-12">
                             <form role="form" name="ajax-form" id="ajax-form" method="post" class="form-main" action="{% url 'home'%}">
                             {% csrf_token %}
                               <div class="form-group">
