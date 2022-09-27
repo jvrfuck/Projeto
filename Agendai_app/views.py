@@ -43,7 +43,7 @@ class AgendamentoTemplateView(TemplateView):
         message = request.POST.get("message")
 
         appointment = Agendamento.objects.create(
-            first_name =fname,
+            first_name=fname,
             last_name=lname,
             email=email,
             phone=mobile,

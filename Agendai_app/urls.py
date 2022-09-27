@@ -4,6 +4,6 @@ from .views import HomeTemplateView, AgendamentoTemplateView, GerenciamentoAgend
 
 urlpatterns = [
     path("", HomeTemplateView.as_view(), name = "home"),
-    path("agendai/", AgendamentoTemplateView.as_view(), name = "agendamento"),
+    path("agendai", AgendamentoTemplateView.as_view(), name = "agendamento"),
     path("gerenciamento-agendamentos/", GerenciamentoAgendamentoTemplateView.as_view(), name = "gerenciamento")
 ]
