@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Empresas{% endblock %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
+
 <div class="offset-1 col-11 list-div">
     <h1>Lista de Empresas</h1>
     <div class="container dashboard">        
-        <div class="col-10 dashboard-box" id="dashboard-done">
+        <div class="col-12 dashboard-box" id="dashboard-done">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -52,10 +55,6 @@
                         <!-- <a href="/changestatus/{{i.id}}"><i class="fas fa-check"></i></a>  -->
                     </div>
                 </div>
-
-                
-
-
                 {% for i in empresas %}        
                 <div class="row">
                     <div class="col" >

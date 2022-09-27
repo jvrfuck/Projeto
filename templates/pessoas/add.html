@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Pessoas{% endblock %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
+    <div class="container text-center mt-2">
     <h1>Adicione Pessoa:</h1>
+    <div class="row mt-5"> 
+        <div class="col-lg-6 col-md-8 col-sm-12">
     <form action="" method="post" >    
         {% csrf_token %}  
-        {{ form }}         
+        <div class="col-lg-6 col-md-8 col-sm-12"> 
+        {{ form }}        
+    </div>
+    <div class="col-lg-4 col-md-8 col-sm-12 mt-3">   
         <input type="submit" value="Submit">
-    </form>   
+    </div>
+    </form> 
+    </div> 
+    </div>
 </div>
 {% endblock %}
