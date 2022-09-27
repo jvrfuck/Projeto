@@ -1,4 +1,4 @@
-{% extends "agendamentos/base.html" %}
+{% extends "base.html" %}
 
 {% block style %}
 
@@ -358,36 +358,36 @@
         </div>
         <div class="row">
 
-          {% for agendamento in agendamentos %}
+          {% for agendamento in appointments %}
             <div class="col-lg-4">
                 <div class="card card-margin">
                     <div class="card-header no-border">
-                        <h5 class="card-title">{{agendamento.primeiro_nome}} {{agendamento.ultimo_nome}}</h5>
+                        <h5 class="card-title">{{agendamento.first_name}} {{agendamento.last_name}}</h5>
                     </div>
                     <div class="card-body pt-0">
                         <div class="widget-49">
                             <div class="widget-49-title-wrapper">
                                 <div class="widget-49-date-primary">
-                                    <span class="widget-49-date-day">{{agendamento.data_envio|date:"d"}}</span>
-                                    <span class="widget-49-date-month">{{agendamento.data_envio|date:"M"}}</span>
+                                    <span class="widget-49-date-day">{{agendamento.sent_date|date:"d"}}</span>
+                                    <span class="widget-49-date-month">{{agendamento.sent_date|date:"M"}}</span>
                                 </div>
                                 <div class="widget-49-meeting-info">
                                     <span class="widget-49-pro-title">{{agendamento.email}}</span>
-                                    <span class="widget-49-meeting-time">{{agendamento.telefone}}</span>
+                                    <span class="widget-49-meeting-time">{{agendamento.phone}}</span>
                                 </div>
                             </div>
                             <div class="widget-49-meeting-points">
-                                <span>{{agendamento.mensagem}}</span>
+                                <span>{{agendamento.request}}</span>
                             </div>
                             <hr class="w-100">
-                            {% if agendamento.aceito == False %}
+                            {% if agendamento.accepted == False %}
                             <form method="POST" action="{% url 'gerenciamento' %}">
                             {% csrf_token %}
                             <div class="form-group">
                                 <input type="date" name="date" class="form-control mb-2" 
                                     placeholder="dd-mm-yyyy" value=""
                                     min="1997-01-01" max="2030-12-31">
-                                    <input hidden="true" name="id_agendamento" value="{{agendamento.id}}">
+                                    <input hidden="true" name="appointment-id" value="{{agendamento.id}}">
                                 <input class="btn-block btn-primary form-control" type="submit" value="Accept">
                             </div>
                           </form>
