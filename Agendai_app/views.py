@@ -28,7 +28,7 @@ class HomeTemplateView(TemplateView):
             reply_to=[email]
         )
         email.send()
-        return HttpResponse("Seu e-mail foi enviado!")
+        return 
 
 
 class AgendamentoTemplateView(TemplateView):
