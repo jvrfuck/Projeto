@@ -6,12 +6,12 @@
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#tecnologias:globe_with_meridians">Tecnologias</a> • 
  <a href="#Instalação">Instalação</a> • 
  <a href="#autores">Autores</a>
 </p>
 
-## Objetivo
+
 
 ## Tecnologias :globe_with_meridians:
 
@@ -49,3 +49,6 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 <a href="https://www.linkedin.com/in/joao-vitor-rios-fuck/" target="_blank"><img src="https://img.shields.io/badge/-Joao%20Fuck-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/rogeriohanke/" target="_blank"><img src="https://img.shields.io/badge/-Rogerio%20Hanke-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <div>
+
+
+## Objetivo
