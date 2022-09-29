@@ -2,12 +2,13 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 import mysql.connector
+from decouple import config
 
 # Definir função de extração SQL
-con = mysql.connector.connect(host='3.89.36.150',
-                            database='pye2122g1',
-                            user='pye2122g1',
-                            password='pye2122g1@25@ago')
+con = mysql.connector.connect(host=config("DBHOST"),
+                            database=config("DBNAME"),
+                            user=config("DBNAME"),
+                            password=config("DBPASSWORD"))
 
 cur = con.cursor()
 sql_select_query = "SELECT pessoa_email FROM app1_pessoas WHERE id=(SELECT max(id) FROM app1_pessoas);"
@@ -16,8 +17,8 @@ destinatario = cur.fetchone()
 
 
 # Define email sender and receiver
-email_sender = "agendaieletronica@gmail.com"
-email_password = "comyryethrahyexh"
+email_sender = config("EADRRESS")
+email_password = config("EPASSWORD")
 email_receiver = destinatario
 
 # Set the subject and body of the email
