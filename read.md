@@ -5,10 +5,10 @@
 </h4>
 
 <p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#tecnologias :globe_with_meridians">Tecnologias</a> • 
+ <a href="#Objetivo">Objetivo</a> •
+ <a href="#Tecnologias">Tecnologias</a> • 
  <a href="#Instalação:hammer_and_wrench">Instalação</a> • 
- <a href="#autores">Autores</a>
+ <a href="#Autores">Autores</a>
 </p>
 
 
