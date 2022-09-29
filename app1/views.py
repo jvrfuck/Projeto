@@ -65,7 +65,7 @@ def empresa_add(request, id=0):
             nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.pj_servico = form.cleaned_data['pj_servico']
             nova_pessoa.save()
-            return HttpResponseRedirect('/empresas/list/')
+            return HttpResponseRedirect('/lista/empresas/')
     else:
         form = EmpresasForm()
     empresas = Pessoas_Juridicas.objects.all()
@@ -80,7 +80,7 @@ def empresa_edit(request, id):
         form = EmpresasForm(request.POST, instance=empresa)
         if (form.is_valid()):
             empresa.save()
-            return redirect('/empresas/list')
+            return redirect('/lista/empresas/')
         else:
             return render(request, 'empresas/edit.html', {'form': form, 'empresa': empresa})
     else:
@@ -91,7 +91,7 @@ def empresa_delete(request, id):
     empresa = get_object_or_404(Pessoas_Juridicas, pk=id)
     empresa.delete()
     messages.info(request, 'PJ apagado do banco de dados')
-    return redirect('/empresas/list')
+    return redirect('/lista/empresas/')
 
 @login_required
 def pessoas(request):
@@ -119,7 +119,7 @@ def pessoa_add(request, id=0):
             nova_pessoa.pessoa_email = form.cleaned_data['pessoa_email']
             nova_pessoa.pf_fidelidade = form.cleaned_data['pf_fidelidade']
             nova_pessoa.save()
-            return HttpResponseRedirect('/pessoas/list')
+            return HttpResponseRedirect('/lista/pessoas/')
     else:
         form = PessoasForm()
         
@@ -140,7 +140,7 @@ def pessoa_edit(request, id):
         form = PessoasForm(request.POST, instance=pessoa)
         if (form.is_valid()):
             pessoa.save()
-            return redirect('/pessoas/list')
+            return redirect('/lista/pessoas/')
         else:
             return render(request, 'pessoas/edit.html', {'form': form, 'pessoa': pessoa})
     else:
@@ -151,4 +151,4 @@ def pessoa_delete(request, id):
     pessoa = get_object_or_404(Pessoas, pk=id)
     pessoa.delete()
     messages.info(request, 'Pessoa apagado do banco de dados')
-    return redirect('/pessoas/list')
+    return redirect('/lista/pessoas/')
