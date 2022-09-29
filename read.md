@@ -1,19 +1,19 @@
 # Agendaí
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  Agendaí Agenda eletronica 🚀 Em construção...  🚧
 </h4>
 
 <p align="center">
  <a href="#Objetivo">Objetivo</a> •
  <a href="#Tecnologias">Tecnologias</a> • 
- <a href="#Instalação:hammer_and_wrench">Instalação</a> • 
+ <a href="#Instalação">Instalação</a> • 
  <a href="#Autores">Autores</a>
 </p>
 
+## Objetivo
 
-
-## Tecnologias :globe_with_meridians:
+## Tecnologias
 
 Foram utilizadas as seguintes tecnologias na construção deste projeto:
 
@@ -26,7 +26,7 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 * <b>MySql</b>
 * <b>GitHub</b>.
 
-## Instalação:hammer_and_wrench:
+## Instalação
 
 * Você vai precisar ter instalado em sua máquina o [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/downloads/).
 
@@ -41,7 +41,7 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 * Com tudo instalado usar o comando, para rodar o servidor : python manage.py runserver
  
 
-## Autores :busts_in_silhouette:
+## Autores
 <div align="center"> 
 <a href="https://www.linkedin.com/in/cnardino/" target="_blank"><img src="https://img.shields.io/badge/-Clayson%20Nardino-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/bitencourtdoug/" target="_blank"><img src="https://img.shields.io/badge/-Douglas%20Bitencourt-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
