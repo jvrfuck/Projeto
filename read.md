@@ -6,8 +6,8 @@
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#tecnologias:globe_with_meridians">Tecnologias</a> • 
- <a href="#Instalação">Instalação</a> • 
+ <a href="#tecnologias :globe_with_meridians">Tecnologias</a> • 
+ <a href="#Instalação:hammer_and_wrench">Instalação</a> • 
  <a href="#autores">Autores</a>
 </p>
 
@@ -26,7 +26,7 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 * <b>MySql</b>
 * <b>GitHub</b>.
 
-## Instalação :hammer_and_wrench:
+## Instalação:hammer_and_wrench:
 
 * Você vai precisar ter instalado em sua máquina o [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/downloads/).
 
