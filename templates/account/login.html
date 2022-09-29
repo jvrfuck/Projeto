@@ -6,7 +6,8 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block content %}
 <head>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
 
 <div class="container text-center mt-5">
   <div class="row">
@@ -30,16 +31,13 @@
 
 </div>
 <div class="col-lg-6 col-md-6 col-sm-12">
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+<p>{% blocktrans with site.name as site_name %}Se você ainda não tem uma conta, por favor, <a href="{{ signup_url }}">Inscreva-se</a>
+{% endblocktrans %}</p>
 
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
-{% else %}
-<p>{% blocktrans %}Se você ainda não tem uma conta, por favor
-<a href="{{ signup_url }}">Inscreva-se</a> first.{% endblocktrans %}</p>
+
 {% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -65,6 +63,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 </div>
 </div>
 </div>
+
 
 
 
