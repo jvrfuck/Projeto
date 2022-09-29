@@ -50,5 +50,3 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 <a href="https://www.linkedin.com/in/rogeriohanke/" target="_blank"><img src="https://img.shields.io/badge/-Rogerio%20Hanke-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <div>
 
-
-## Objetivo

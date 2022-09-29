@@ -18,10 +18,9 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    # path('', views.helloworld),
+    path('', include('Agendai_app.urls')),
     path('admin/', admin.site.urls),
-    # path("", include('app1.urls')),
+    # path('app1/, include('app1.urls')),
     path('accounts/', include('allauth.urls')),
-    # path("", include('Calendario.urls')),
-    path("", include('Agendai_app.urls'))
+    # path('calendario/', include('Calendario.urls'))
 ]
