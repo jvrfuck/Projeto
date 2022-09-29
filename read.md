@@ -30,24 +30,24 @@ dotnet --version
 
 ## Autores :busts_in_silhouette:
 <div align="center"> 
-<a href="https://www.linkedin.com/in/cnardino/" target="_blank"><img src="https://img.shields.io/badge/-Kauã Amaral-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/claudiohr" target="_blank"><img src="https://img.shields.io/badge/-Claudio H. Raimundo-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/efraim-calebe-mertens" target="_blank"><img src="https://img.shields.io/badge/-Efraim C. Mertens-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://br.linkedin.com/in/wellington-scaburri" target="_blank"><img src="https://img.shields.io/badge/-Wellington Scaburri-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://br.linkedin.com/in/leonardopokreweckysalvador?trk=public_profile_browsemap" target="_blank"><img src="https://img.shields.io/badge/-Leonardo Pokrewecky-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/cnardino/" target="_blank"><img src="https://img.shields.io/badge/-Clayson%20Nardino-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/bitencourtdoug/" target="_blank"><img src="https://img.shields.io/badge/-Douglas%20Bitencourt-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/rogeriohanke/" target="_blank"><img src="https://img.shields.io/badge/-Rogerio%20Hanke-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/joao-vitor-rios-fuck/" target="_blank"><img src="https://img.shields.io/badge/-Joao%20Fuck-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/jessicamaros/" target="_blank"><img src="https://img.shields.io/badge/-Jessica%20Maros-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <div>
 
 
 ---------------------------------------------------------------
 
-Davy de Lima Carvalho
+Clayson Nardino
 
 Linkedin: https://www.linkedin.com/in/cnardino/
 
 Instagram: N/A
 
-Email: davycarvalho2017@hotmail.com
+Email: ??????
 
-Whatsapp: 47 99600-5815
+Whatsapp:?????
 
 ---------------------------------------------------------------
