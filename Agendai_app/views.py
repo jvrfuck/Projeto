@@ -20,6 +20,7 @@ class HomeTemplateView(TemplateView):
         email = request.POST.get("email")
         message = request.POST.get("message")
 
+
         email = EmailMessage(
             subject= f"{name} do Agendaí.",
             body=message,
@@ -41,6 +42,8 @@ class AgendamentoTemplateView(TemplateView):
         email = request.POST.get("email")
         mobile = request.POST.get("mobile")
         message = request.POST.get("message")
+        cpf = request.POST.get("cpf")
+        nascimento = request.POST.get("nascimento")
 
         appointment = Agendamento.objects.create(
             first_name=fname,
@@ -48,6 +51,8 @@ class AgendamentoTemplateView(TemplateView):
             email=email,
             phone=mobile,
             request=message,
+            cpf=cpf,
+            nascimento=nascimento,
         )
 
         appointment.save()
