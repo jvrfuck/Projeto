@@ -5,29 +5,26 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<head>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
 
 <div class="container px-1 mx-auto">
-  <div class="row d-flex justify-content-center">
+  <div class="cadastro">
       <div class="col-lg-12 col-md-12 col-sm-12 text-center">   
 
-<h1>{% trans "Sign Up" %}</h1>
+<h1 class="entre-titulo">{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="entre">{% blocktrans %}Ja possui uma conta? Por favor, <a href="{{ login_url }}">entre</a>.{% endblocktrans %}</p>
       </div>
     </div>
-<div class="row d-flex justify-content-center">
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+<div class="cadastro">
+<form class="cadastre" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <button class="botao-cadastro" type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
 </div>
-
+</div>
 
 {% endblock %}

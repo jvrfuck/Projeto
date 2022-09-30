@@ -3,6 +3,10 @@
 body{
     font-size: 100%;
     background: linear-gradient(68.15deg, #f3f1f1 16.62%, #d33d5e 85.61%);
+    padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
 }
 
 .cabecalho {
@@ -24,6 +28,7 @@ body{
     font-weight: 400px;
     font-size: 16px;
     font-family: 'Signika Negative', sans-serif;
+    border-bottom: 1px solid #202020;
 }
 
 .conteudo{
@@ -56,7 +61,8 @@ body{
     font-family: 'Signika Negative', sans-serif;
     font-size:24px ;
     font-weight: 400px;
-    color:#1c0e1c
+    color:#1c0e1c;
+    margin-bottom: 16px;
 }
 .conteudo-imagem-mulher{
   max-width:1000px;
@@ -64,12 +70,41 @@ body{
   width: auto;
   height: auto;
 }
-footer {
-    background: linear-gradient(68.15deg, #f3f1f1 16.62%, #d33d5e 85.61%);
-    height: 100px;
-    border-top: 1px solid #202020;
+.cadastro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+}
+.cadastre{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+.botao-cadastro{
+  align-items: center;
+  margin-bottom: 187px;
 }
 
+.log{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  font-weight: 400;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.entre{
+  font-weight: 400;
+  font-size: 24px;
+  
+}
+.entre-titulo{
+  margin-top: 100px;
+}
 /*############
   HEADER
 ##############*/
@@ -423,7 +458,7 @@ footer {
   .logo i,.question-q-box,.social-circle li a:hover {
     background-color: #f16000 !important;
   }
-  .title-box .title-alt,.text-colored,.footer a:hover,
+  .title-box .title-alt,.text-colored, a:hover,
   .navbar-custom .navbar-nav li a:hover,
   .navbar-custom .navbar-nav li a:focus,
   .navbar-custom .navbar-nav li a:active,
@@ -485,9 +520,6 @@ footer {
     }
     .feature-detail {
       padding: 0px 0px 50px 30px !important;
-    }
-    .footer h5 {
-      margin-top: 30px;
     }
   }
   
