@@ -12,8 +12,10 @@
   <title>Agendaí</title>
 </head>
 <body>
+<div class="container">       
     <main class="conteudo">
         <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+           
             <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/Agendaí.png' %}"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -70,11 +72,14 @@
             </div>
         </nav>
     </main>
+</div>
         {% block content %}
         {% endblock %}
-               
-        </div>
-    </div>
+
+        <footer>             
+            <p><center> <img class="rodape-imagem" src="{% static 'imagens/Agendaí 2022.png' %}"></center></p>
+</footer>
+ 
       
     <script
     src="https://code.jquery.com/jquery-3.4.0.min.js"
