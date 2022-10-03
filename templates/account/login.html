@@ -6,29 +6,15 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block content %}
 
-
-
   
 <h1>{% trans "" %}</h1>
-<!-- <main class="conteudo">
-  <section class="conteudo-principal">
-      <div class="conteudo-escrito">
-          <h1 class="conteudo-titulo">Agendaí</h1>
-          <h2 class="conteudo-subtitulo">Sua central de agendamentos esta aqui!</h2>
-      </div> -->
     
 
 {% get_providers as socialaccount_providers %}
 
 
-
 {% if socialaccount_providers %}
 
-
-<!-- </div> -->
-
-<!-- <p>{% blocktrans with site.name as site_name %}Se você ainda não tem uma conta, por favor, <a href="{{ signup_url }}">Inscreva-se</a>
-{% endblocktrans %}</p> -->
 
 
 {% include "socialaccount/snippets/login_extra.html" %}
@@ -40,9 +26,20 @@
 <div class="container text-dark mt-5">
   <div class="row justify-content-md-center">
     <div class="col-md-5 bg-grey p-3">
-      <form class="form-signin">
-        <h1 class="h3 mb-3">Entre com a sua conta</h1>
-          <label for="inputEmail" class="sr-only">Email</label>
+      <h1 class="h3 mb-3 mt-5">Entre com a sua conta</h1>
+      
+      <form class=" container text-dark mt-5 justify-content-md-center" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+        
+          <input type="hidden"  class="sr-only" name="{{ redirect_field_name }}"  value="{{ redirect_field_value }}"/>
+          {% endif %}
+        </form>
+          <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
+        
+
+          <!-- <label for="inputEmail" class="sr-only">Email</label>
           <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
           <label for="inputPassword" class="sr-only">Senha</label>
           <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
@@ -50,13 +47,17 @@
             <label>
               <input type="checkbox" value="remember-me"> Lembrar-me
             </label>  
-          </div>
-          <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
+          </div> -->
+          <!-- <button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button> -->
+      
           <a href="{% provider_login_url 'google' %}" class="btn btn btn-danger btn-lg btn-light btn-block" role="button" aria-pressed="true">Entrar com o google</a>
           <!-- <p class="mt-5 mb-3 text-muted">&copy; Agendai</p> -->
-          <p>{% blocktrans with site.name as site_name %}<h3 class="h3 mb-3">Se você ainda não tem uma conta, por favor,</h3> <a href="{{ signup_url }}"><button class="btn btn-lg btn-light btn-block" type="submit">Inscreva-se</button></a>
-            {% endblocktrans %}</p>
-        </form>
+          <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        
+        
+        <p>{% blocktrans with site.name as site_name %}<h3 class=" h3 mb-3">Se você ainda não tem uma conta, por favor,</h3> <a href="{{ signup_url }}"><button class="btn btn-lg btn-light btn-block" type="submit">Inscreva-se</button></a>
+          {% endblocktrans %}</p>
+          <div class="espaco"></div>
     </div>
   </div>
 </div>
