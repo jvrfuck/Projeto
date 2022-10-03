@@ -26,19 +26,19 @@
                 <ul class="nav navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/lista/empresas">Empresas</a>
+                        <a class="nav-link active" href="/lista/empresas">Empresas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lista/pessoas">Pessoas</a>
+                        <a class="nav-link active" href="/lista/pessoas">Pessoas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/agendai">Agendamento</a>
+                        <a class="nav-link active" href="/agendai">Agendamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/gerenciamento-agendamentos">Gerenciamento</a>
+                        <a class="nav-link active" href="/gerenciamento-agendamentos">Gerenciamento</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="/admin">Admin</a>
+                            <a class="nav-link active" href="/admin">Admin</a>
                         </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" href="/#team">Sobre Nós</a>
@@ -62,7 +62,7 @@
                 {% endif %}  
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                        <a class="nav-link" href="/accounts/logout">Sair </a>
+                        <a class="nav-link active" href="/accounts/logout">Sair </a>
                 </li>
                 {% endif %}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

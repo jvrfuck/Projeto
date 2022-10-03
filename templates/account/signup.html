@@ -18,11 +18,23 @@
 <div class="cadastro">
 <form class="cadastre" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="botao-cadastro" type="submit">{% trans "Sign Up" %} &raquo;</button>
+
+  <form class="cadastre" id="signup_form" method="post" action="/accounts/signup/">
+    <input type="hidden" name="csrfmiddlewaretoken" value="pwTibctJXet9TIWKCnNtGsSqxDVx2ZJimqXSQR8R1XEefnNXn8kWGkBCzV9yIVRU">
+    <p>
+      <input type="email" name="email" placeholder="Endereço de e-mail" autocomplete="email" required="" id="id_email">
+    </p>
+    <p>
+      <input type="text" name="username" placeholder="Nome de usuário" autocomplete="username" minlength="1" maxlength="150" required="" id="id_username">
+    </p>
+    <p>
+      <input type="password" name="password1" placeholder="Senha" autocomplete="new-password" required="" id="id_password1">
+    </p>
+    <p>
+      <input type="password" name="password2" placeholder="Senha (novamente)" autocomplete="new-password" required="" id="id_password2">
+    </p>
+    <button class="botao-cadastro" type="submit">Cadastro</button>
+  </form>
 </form>
 </div>
 </div>
