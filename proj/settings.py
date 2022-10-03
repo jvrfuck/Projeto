@@ -169,3 +169,14 @@ try:
     from . local_settings import *
 except ImportError:
     pass
+
+SOCIALACCOUNT_PROVIDERS = { 'google': 
+                             { 'SCOPE': ['email'],
+                               'AUTH_PARAMS': { 'access_type': 'online' }
+                             }
+                          }
+
+SOCIALACCOUNT_QUERY_EMAIL = True
+ACCOUNT_LOGOUT_ON_GET= True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_EMAIL_REQUIRED = True
