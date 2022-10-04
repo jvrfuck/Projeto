@@ -212,6 +212,7 @@ class SessionListView(ListView):
 # saving code by following conventions
 class SessionDetailView(DetailView):
     model = Calendario
+    template_name = "calendario/session_detail.html"
 
 
 # note: mixins should come before CreateView
@@ -247,15 +248,15 @@ class SessionEditView(
     success_message = "Session was updated successfully"
 
     def form_valid(self, form):
-        form.instance.student = self.request.user
+        form.instance.course_name = self.request.user
         return super().form_valid(form)
 
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.student:
+        if self.request.user == session.course_name:
             return True
         return False
-
+    
 
 
 class SessionCancelView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -263,7 +264,7 @@ class SessionCancelView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.student:
+        if self.request.user == session.course_name:
             return True
         return False
 
@@ -272,14 +273,14 @@ class SessionCancelView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def home(request):
     context = {"days": generate_daylist()}
-    return render(request, "base.html", context)
+    return render(request, "calendario/home.html", context)
 
 
 def about(request):
-    return render(request, "sobre.html")
+    return render(request, "calendario/about.html")
 
 
 def sessions(request):
     context = {"sessions": Calendario.objects.all()}
-    return render(request, "sessions.html", context)
+    return render(request, "calendario/sessions.html", context)
 

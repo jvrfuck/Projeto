@@ -123,7 +123,7 @@ class Calendario(models.Model):
         return self.date.strftime("%A")
 
     def __str__(self) -> str:
-        return f"{self.student.username}: {self.date} ({self.timeblock})"
+        return f"{self.course_name}: {self.date} ({self.timeblock})"
 
     def get_absolute_url(self):
         # returns a complete url string and let view handle the redirect

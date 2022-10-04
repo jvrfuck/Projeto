@@ -29,5 +29,6 @@ urlpatterns = [
     ),
     path("sessions/<int:pk>/edit", views.SessionEditView.as_view(), name="session-edit"),
     path(
-        "sessions/<int:pk>/cancel", views.SessionCancelView.as_view(), name="session-cancel")
+        "sessions/<int:pk>/cancel", views.SessionCancelView.as_view(), name="session-cancel"),
+    path("sessions/home", views.home, name="scheduler-home"),
 ]

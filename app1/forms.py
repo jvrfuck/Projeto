@@ -1,5 +1,5 @@
 from django import forms
-from .models import Calendario, Pessoas, Pessoas_Fisicas, Pessoas_Juridicas
+from .models import Calendario, Pessoas, Pessoas_Fisicas, Pessoas_Juridicas, Calendario
 
 
 class PessoasForm(forms.ModelForm):
@@ -15,8 +15,8 @@ class EmpresasForm(forms.ModelForm):
                   'pessoa_telefone', 'pessoa_endereco', 'pessoa_email', 'pj_servico')
 
 class SessionForm(forms.ModelForm):
-    date = forms.DateField(disabled=True)
-    timeblock = forms.CharField(disabled=True)
+    # date = forms.DateField(disabled=True)
+    # timeblock = forms.CharField(disabled=True)
     course_name = forms.CharField(
         widget=forms.TextInput(attrs={"placeholder": "i.e. Serviço"}), required=False
     )
