@@ -13,4 +13,21 @@ urlpatterns = [
     path('empresa/add', views.empresa_add),
     path('empresa/edit/<int:id>', views.empresa_edit, name="edit-empresa"),
     path('empresa/delete/<int:id>', views.empresa_delete, name="delete-empresa"),
+    ##################################################################################
+    path("sessions/", views.SessionListView.as_view(), name="scheduler-sessions"),
+    path("sessions/<int:pk>/", views.SessionDetailView.as_view(), name="session-detail"),
+    path("sessions/new/", views.SessionCreateView.as_view(), name="session-create"),
+    path(
+        "sessions/new/<date>/",
+        views.SessionCreateView.as_view(),
+        name="session-create-date",
+    ),
+    path(
+        "sessions/new/<date>/<str:timeblock>",
+        views.SessionCreateView.as_view(),
+        name="session-create-spec",
+    ),
+    path("sessions/<int:pk>/edit", views.SessionEditView.as_view(), name="session-edit"),
+    path(
+        "sessions/<int:pk>/cancel", views.SessionCancelView.as_view(), name="session-cancel")
 ]

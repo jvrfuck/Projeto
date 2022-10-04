@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import EmpresasForm, PessoasForm
 from django.http import HttpResponseRedirect
-from .models import Pessoas, Pessoas_Juridicas, Pessoas_Fisicas
+from .models import Calendario, Pessoas, Pessoas_Juridicas, Pessoas_Fisicas
 from django.contrib import messages
 # Create your views here.
 
@@ -152,3 +152,134 @@ def pessoa_delete(request, id):
     pessoa.delete()
     messages.info(request, 'Pessoa apagado do banco de dados')
     return redirect('/lista/pessoas/')
+
+####################################################################
+import datetime
+
+from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    ListView,
+    UpdateView,
+)
+from .forms import SessionForm
+
+def generate_daylist():
+    daylist = []
+    today = datetime.date.today()
+    for i in range(7):
+        day = {}
+        curr_day = today + datetime.timedelta(days=i)
+        weekday = curr_day.strftime("%A").upper()
+        day["date"] = str(curr_day)
+        day["day"] = weekday
+        day["A_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="A").exists()
+        )
+        day["B_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="B").exists()
+        )
+        day["C_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="C").exists()
+        )
+        day["D_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="D").exists()
+        )
+        day["E_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="E").exists()
+        )
+        day["F_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        if day["day"] != "SATURDAY":  # Writing lab doesn't open on Saturday
+            daylist.append(day)
+    return daylist
+
+
+class SessionListView(ListView):
+    model = Calendario
+    template_name = "calendario/sessions.html"  # <app>/<model>_<view_type>.html
+    context_object_name = "sessions"
+    ordering = ["-date"]
+
+
+# saving code by following conventions
+class SessionDetailView(DetailView):
+    model = Calendario
+
+
+# note: mixins should come before CreateView
+class SessionCreateView(LoginRequiredMixin, CreateView):
+    # model = Session
+    # fields = ["date", "timeblock", "course_name", "course_teacher", "helptype"]
+    form_class = SessionForm
+    template_name = "calendario/session_form.html"
+
+    def form_valid(self, form):
+        form.instance.student = self.request.user
+        return super().form_valid(form)
+
+    def get_initial(self):
+        return {
+            "date": self.kwargs.get("date"),
+            "timeblock": self.kwargs.get("timeblock"),
+        }
+
+
+    # def get_form_kwargs(self, *args, **kwargs):  # forms.py def clean()
+    #     kwargs = super(SessionCreateView, self).get_form_kwargs(*args, **kwargs)
+    #     kwargs["user"] = self.request.user
+    #     return kwargs
+
+
+class SessionEditView(
+    SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView
+):
+    model = Calendario
+    fields = ["course_name", "course_teacher", "helptype"]
+    # success_url = "/users/<str:username>/"
+    success_message = "Session was updated successfully"
+
+    def form_valid(self, form):
+        form.instance.student = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        session = self.get_object()
+        if self.request.user == session.student:
+            return True
+        return False
+
+
+
+class SessionCancelView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Calendario
+
+    def test_func(self):
+        session = self.get_object()
+        if self.request.user == session.student:
+            return True
+        return False
+
+  
+
+
+def home(request):
+    context = {"days": generate_daylist()}
+    return render(request, "base.html", context)
+
+
+def about(request):
+    return render(request, "sobre.html")
+
+
+def sessions(request):
+    context = {"sessions": Calendario.objects.all()}
+    return render(request, "sessions.html", context)
+

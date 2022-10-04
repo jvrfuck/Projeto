@@ -1,5 +1,8 @@
 from django.db import models
 import uuid
+from django.utils import timezone
+from django.urls import reverse
+from datetime import date
 # Create your models here.
 
 def upload_image_formater(instance, filename):
@@ -89,14 +92,39 @@ class Locais(models.Model):
         verbose_name_plural = 'Locais'
 
 class Calendario(models.Model):
-    CalendarioCreated = models.DateTimeField(verbose_name="TimeStamp", auto_now_add=True)
+    
+    TIMEBLOCK_CHOICES = (
+        ("A", "8:00-8:20"),
+        ("B", "8:20-8:40"),
+        ("C", "8:40-9:00"),
+        ("D", "9:00-9:20"),
+        ("E", "9:20-9:40"),
+        ("F", "9:40-10:00"),
+    )
 
+    date_posted = models.DateTimeField(default=timezone.now)
+    date = models.DateField(default=timezone.now)
+    timeblock = models.CharField(max_length=10, choices=TIMEBLOCK_CHOICES, default="A")
 
-    def __str__(self):
-        return ''
+    course_name = models.CharField(max_length=30, default="")
+    course_teacher = models.CharField(max_length=30, default="")
+    helptype = models.CharField(max_length=50, default="")
 
-    class Meta:
-        ordering = ()
-        verbose_name = "Calendario"
-        verbose_name_plural ="Calendarios"
+    # @property
+    def is_upcoming(self):
+        return date.today() <= self.date
 
+    is_upcoming.admin_order_field = "date"
+    is_upcoming.boolean = True
+    is_upcoming.short_description = "Session in the future?"
+
+    @property
+    def get_weekday(self):
+        return self.date.strftime("%A")
+
+    def __str__(self) -> str:
+        return f"{self.student.username}: {self.date} ({self.timeblock})"
+
+    def get_absolute_url(self):
+        # returns a complete url string and let view handle the redirect
+        return reverse("session-detail", kwargs={"pk": self.pk})
