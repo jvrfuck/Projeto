@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"></head>
 
 <div class="col-12">
-    <center><h1>Lista de Empresas</h1></center>
-    <div class="container dashboard">        
-        <div class="col-12 dashboard-box" id="dashboard-done">
+    <center><h1>Lista de Empresas</h1></center>    
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -36,7 +34,7 @@
                 </div>
             </div>
 
-                <table class="table table-bordered" border = "3" cellspacing = "3" cellpadding = "3" width = "100%">
+                <table class="table table-borderless table-hover" border = "3" cellspacing = "3" cellpadding = "3" width = "100%">
                     <tr>
                         <td><span>ID</span></td>
                         <td><span>Nome</span></td>
@@ -68,6 +66,5 @@
                 </table>
                 
         </div>
-</div>
-</div>
+
 {% endblock %}

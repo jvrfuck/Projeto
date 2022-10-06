@@ -1,17 +1,23 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="content-section">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Schedule a New Session</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <a class="btn btn-outline-secondary" href="{% url 'home' %}">Cancel</a>
-            <button class="btn btn-outline-info" type="submit">Submit</button>
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <div class="content-section">
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Schedule a New Session</legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <a class="btn btn-outline-secondary" href="{% url 'home' %}">Cancel</a>
+                        <button class="btn btn-outline-info" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
 {% endblock content %}
