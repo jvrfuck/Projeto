@@ -72,7 +72,6 @@ class Migration(migrations.Migration):
                 ('pessoa_endereco', models.CharField(default=None, max_length=100, verbose_name='Endereco da Pessoa')),
                 ('pessoa_email', models.CharField(default=None, max_length=100, verbose_name='Email da Pessoa')),
                 ('pessoa_imagem', models.ImageField(blank=True, default=None, null=True, upload_to='', verbose_name=app1.models.upload_image_formater)),
-                ('pessoa_senha', models.CharField(default='Senha', max_length=100, verbose_name='Senha da Pessoa')),
             ],
             options={
                 'verbose_name': 'Pessoa',

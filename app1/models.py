@@ -3,6 +3,7 @@ import uuid
 from django.utils import timezone
 from django.urls import reverse
 from datetime import date
+from allauth import app_settings as allauth_app_settings
 # Create your models here.
 
 def upload_image_formater(instance, filename):
@@ -17,7 +18,8 @@ class Pessoas(models.Model):
     pessoa_endereco = models.CharField(max_length = 100,verbose_name="Endereco da Pessoa",default=None)
     pessoa_email = models.CharField(max_length = 100,verbose_name="Email da Pessoa",default=None)
     pessoa_imagem = models.ImageField(upload_image_formater, default=None, blank=True, null=True)
-    pessoa_senha =  models.CharField(max_length = 100,verbose_name="Senha da Pessoa",default='Senha', blank=False, null=False)
+    # pessoa_senha =  models.CharField(max_length = 100,verbose_name="Senha da Pessoa",default='Senha', blank=False, null=False)
+    pessoa_usuario = models.ForeignKey(allauth_app_settings.USER_MODEL, verbose_name="usuario", on_delete=models.RESTRICT, default=None, blank=True, null=True)
 
     def __str__(self):
         return '%s %s %s %s %s %s' % (self.pessoa_nome, self.pessoa_telefone,self.pessoa_email, self.pessoa_created, self.ativo, self.pessoa_endereco)

@@ -4,6 +4,8 @@ from .forms import EmpresasForm, PessoasForm
 from django.http import HttpResponseRedirect
 from .models import Calendario, Pessoas, Pessoas_Juridicas, Pessoas_Fisicas
 from django.contrib import messages
+from django.contrib.auth.models import User
+
 # Create your views here.
 
 
@@ -43,9 +45,9 @@ def sobre(request):
 def empresas(request):
     search = request.GET.get('search')
     if search:
-      empresas = Pessoas_Juridicas.objects.filter(pessoa_nome__icontains=search)
+      empresas = Pessoas.objects.filter(User)
     else:
-      empresas = Pessoas_Juridicas.objects.all()
+      empresas = Pessoas.objects.all()
 
     return render(request, 'empresas/list.html',
                   {'empresas': empresas})  
