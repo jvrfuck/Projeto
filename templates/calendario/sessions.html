@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 {% for session in sessions %}
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
@@ -11,5 +14,8 @@
         <p class="article-content">{{ session.date|date:"l" }}</p>
     </div>
 </article>
+</div>
+</div>
+</div>
 {% endfor %}
 {% endblock content %}
