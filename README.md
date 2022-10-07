@@ -9,11 +9,11 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/jvrfuck/Projeto">
-    <img src="app1/static/imagens/Agendaí.png" alt="site" width="80" height="80">
+    <img src="app1/static/imagens/Logo.jpg" alt="site" width="180" height="180">
   </a>
 
 <h3 align="center">Agendaí</h3>
@@ -32,38 +32,38 @@
 </div>
 
 
-
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#Sobre-o-Projeto">Sobre o Projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#Tecnologia-Utilizada">Tecnologia Utilizadas</a></li>
+        <li><a href="#tecnologia-utilizada">Tecnologia Utilizada</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#inicializando-o-projeto">Inicializando o Projeto </a>
       <ul>
-        <li><a href="#Instalação">Instalação</a></li>
-        <li><a href="#Pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#Roteiro">Roteiro</a></li>
-    <li><a href="#Licença">Licença</a></li>
-    <li><a href="#Contato">Contato</a></li>
-    <li><a href="#Agradecimentos">Agradecimentos</a></li>
+    <li><a href="#agendaí-em-uso">Agendaí em Uso</a></li>
+    <li><a href="#roteiro">Roteiro</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#agradecimentos">Agradecimentos</a></li>
   </ol>
 </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
 [![agendai][agendai.shield]][agendai-url]
+
+<p align="center">
+<img src="app1/static/imagens/site.jpg" alt="site" width="150" height="100">
+</p>
 
 Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
 
@@ -93,11 +93,11 @@ Utilizaremos ferramentas de back e front-end em python, como Django, assim como 
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
-<!-- GETTING STARTED -->
+
 ## Inicializando o Projeto 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Para colocar uma cópia em execução na sua maquina local, siga as etapas abaixo.
+
 
 ### Instalação
 
@@ -114,6 +114,7 @@ To get a local copy up and running follow these simple example steps.
    pip install -r requirements.txt
    ```
 
+
 ### Pré-requisitos
 
 Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de desenvolvimento para obter as senhas necessarias.
@@ -124,8 +125,8 @@ Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de 
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+
+## Agendaí em Uso
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -134,8 +135,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
 
-
-<!-- ROADMAP -->
 ## Roteiro
 
 - [x] Cadastro de Clientes
@@ -159,7 +158,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
 
-<!-- LICENSE -->
 ## Licença
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
@@ -167,28 +165,34 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
 
-
-<!-- CONTACT -->
 ## Contato
 
-* [![Email][Email.shield]][Email-url]
+<div align="center"> 
 
-* [![Whats][Whats.shield]][Whats-url]
+ [![Email][Email.shield]][Email-url]
+
+ [![Whats][Whats.shield]][Whats-url]
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
 ## Agradecimentos
 
-* []()
+*
 * []()
 * []()
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
+## Autores 
 
+<div align="center"> 
+
+[![clayson][clayson.shield]][Clayson-url]
+[![douglas][douglas.shield]][douglas-url]
+[![jessica][jessica.shield]][jessica-url]
+[![joao][joao.shield]][joao-url]
+[![rogerio][rogerio.shield]][rogerio-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- Primeira Parte -->
@@ -202,13 +206,10 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 [issues-url]: https://github.com/jvrfuck/Projeto/issues
 [license-shield]: https://img.shields.io/github/license/jvrfuck/Projeto.svg?style=for-the-badge
 [license-url]: https://github.com/jvrfuck/Projeto/blob/main/LICENSE
-
 [agendai.shield]: https://img.shields.io/badge/Agenda%C3%AD-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white
 [agendai-url]: http://agendaieletronica.herokuapp.com/
 
-
 <!-- Segunda Parte -->
-
 [Python.shield]: https://img.shields.io/badge/Python-0769AD?style=for-the-badge&logo=Python&logoColor=white
 [Python-url]: https://www.python.org/
 [VisualCode.shield]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
@@ -240,4 +241,14 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 [Whats.shield]: https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white  
 [Whats-url]: https://chat.whatsapp.com/CoJrgWnkgPk5gcZKuy4dky
 
-
+<!-- Autores -->
+[clayson.shield]: https://img.shields.io/badge/Clayson%20Nardino-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
+[clayson-url]: https://www.linkedin.com/in/cnardino/
+[douglas.shield]: https://img.shields.io/badge/Douglas%20Bitencourt-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
+[douglas-url]: https://www.linkedin.com/in/bitencourtdoug/
+[jessica.shield]: https://img.shields.io/badge/-Jessica%20Maros-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[jessica-url]: https://www.linkedin.com/in/jessicamaros/
+[joao.shield]: https://img.shields.io/badge/-Joao%20Fuck-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[joao-url]: https://www.linkedin.com/in/joao-vitor-rios-fuck/
+[rogerio.shield]: https://img.shields.io/badge/-Rogerio%20Hanke-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[rogerio-url]: https://www.linkedin.com/in/rogeriohanke/
