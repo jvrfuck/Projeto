@@ -167,8 +167,6 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Contato
 
-<div align="center"> 
-
  [![Email][Email.shield]][Email-url]
 
  [![Whats][Whats.shield]][Whats-url]
@@ -178,9 +176,11 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Agradecimentos
 
-*
-* []()
-* []()
+À instituição de ensino Entra21 BlueSoft,contribuiu de maneira essencial para o processo de formação profissional, pelo fornecimento de dados e materiais que foram fundamentais para o desenvolvimento da pesquisa que possibilitou a realização deste Projeto.
+[![entra21][entra21.shield]][entra21-url]
+
+Quero agradecer a todos os professores do Entra21, especialmente ao seu orientador de Python, prof. Adriano Machado. Obrigado mestre por exigir mais do que nos acreditavamos que seriamos capazes de realizar. Deixamos aqui nossa eterna gratidão pelo compartilhamento de seu conhecimento e tempo, bem como sua amizade.
+[![adriano][adriano.shield]][adriano-url]
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
@@ -240,6 +240,12 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 [Email-url]: mailto:agendaieletronica@gmail.com
 [Whats.shield]: https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white  
 [Whats-url]: https://chat.whatsapp.com/CoJrgWnkgPk5gcZKuy4dky
+
+<!-- Agradecimento -->
+[entra21.shield]: https://img.shields.io/badge/Entra21-1B6AC6.svg?style=for-the-badge&logo=gnu-emacs&logoColor=white
+[entra21-url]: https://www.entra21.com.br/
+[Adriano.shield]:  
+[Adriano-url]: 
 
 <!-- Autores -->
 [clayson.shield]: https://img.shields.io/badge/Clayson%20Nardino-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
