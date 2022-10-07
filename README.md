@@ -1,101 +1,243 @@
-## Projeto final do Entra 21 = Agendaí <img src="Images\LogoAgendai.png" width="25">
+<a name="readme-top"></a>
+<!--
+*** Obrigado por verificar o Readme do Agendai, qualquer sugestão para melhoria ou problemas, por favor entre em contato conosco.
+-->
 
-- Desenvolvedores: Clayson Nardino, Douglas Bitencourt Cardoso, João Vítor Rios Fuck, Jéssica Tayna Maros, Rogério Tatsch Hanke.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-# Projeto
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/jvrfuck/Projeto">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-- Requisitos do projeto: <https://docs.google.com/document/d/15Runmr5Ljqp23SenOck1fnrTyBloaZlHDk97gjwZP_k/edit>
-- Trello das etapas do projeto: <https://trello.com/b/UMKDek1s/projeto-entra-21>
+<h3 align="center">Agendaí</h3>
 
-Logo do Site:  
-
-<img src="Images/AGENDAI.png">
-
-### Objetivo
-
-Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
-
-Sistema com cadastro de usuários (log in, senha, perfil).
-
-Inclusão de Sistema de Fidelidade, para gerar bônus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
-
-Utilizaremos ferramentas de back e front-end em python, como Django, assim como javascript, html, css e utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
-
-## Nome
-
-- Agendaí
-
-## Tarefas
-
-- Dividir grupo em front(dupla) e back end(trio);
-
-- Fazer o banco de dados com os usuários e empresas;
-
-- Definir coloração, layout e quantas páginas;
-
-- Definir logo.
-
-## Projetos futuros
-
-- Controle financeiro
-- Pagamento por pix e cartão pelo APP
-
-## Criação de tabelas do banco de Dados
-
-Empresa
--
-empresa_id pk
-empresa_nome string
-empresa_atividade 
-empresa_cnpj 
-empresa_endereco
-empresa_telefone
-empresa_email
-empresa_servico FK >- Servico.servico_id
-
-Pessoas
--
-pessoas_id pk FK >- Usuario.usuario_nome
-pessoas_nome 
-pessoas_cpf
-pessoas_dataNascimento
-pessoas_telefone
-pessoas_email
-pessoas_fidelidade
-
-Horario
--
-horario_id pk
-horario_empresa FK >- Empresa.empresa_id
-horario_pesssoas FK >- Pessoas.pessoas_id
-horario_local FK >- Locais.local_id
-horario_servico FK >- Servico.servico_id 
-horario_duracao
-horario_inicio(datetime)
-horario_tipo
-
-Servico
--
-servico_id pk
-servico_nome
-servico_registroClasse
-servico_descricao
-servico_miniCV
-servico_valor
-
-Usuario
--
-usuario_id pk
-usuario_nome FK >- Empresa.empresa_id
-
-Locais
--
-local_id pk FK >- Empresa.empresa_endereco
-local_nome
-local_endereco 
-local_discricao
+  <p align="center">
+    Sua Central de Agendamento está aqui 
+    <br />
+    <a href="https://github.com/jvrfuck/Projeto"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jvrfuck/Projeto">View Demo</a>
+    ·
+    <a href="https://github.com/jvrfuck/Projeto/issues">Report Bug</a>
+    ·
+  </p>
+</div>
 
 
-Usuario: joao
-senha: Grupo1Entra21
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Sobre o Projeto</a>
+      <ul>
+        <li><a href="#built-with">Tecnologia Utilizadas</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [![Python][Python.shield]][Python-url]
+* [![VisualCode][VisualCode.shield]][VisualCode-url]
+* [![Bootstrap][Bootstrap.shield]][Bootstrap-url]
+* [![Java-Script][Java-Script.shield]][Java-Script-url]
+* [![CSS][CSS.shield]]
+* [![GitHub][GitHub.shield]][GitHub-url]
+* [![Mysql][Mysql.shield]][Mysql-url]
+* [![git][git.shield]][git-url]
+* [![Html][Html.shield]]
+* [![trello][trello.shield]][trello-url]
+* [![Heroku][Heroku.shield]][Heroku-url]
+* [![git][git.shield]][git-url]
+
+
+DBsqlite
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+
+See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
+
+
+[Python.shield]: https://img.shields.io/badge/Python-0769AD?style=for-the-badge&logo=Python&logoColor=white
+[Python-url]: https://www.python.org/
+[VisualCode.shield]: https://img.shields.io/badge/VisualCode-0769AD?style=for-the-badge&logo=Vscode&logoColor=white
+[VisualCode-url]: https://code.visualstudio.com/
+[Bootstrap.shield]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[Java-Script.shield]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[Java-Script-url]: https://www.javascript.com/
+[CSS.shield]: https://img.shields.io/static/v1?message=css3&logo=css3&labelColor=5c5c5c&color=1182c3&logoColor=white&label=%20&style=plastic
+[GitHub.shield]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+[GitHub-url]: https://github.com/
+[Mysql.shield]: https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white
+[Mysql-url]: https://www.mysql.com/
+[Html.shield]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[git.shield]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
+[git-url]: https://git-scm.com/
+[trello.shield]: https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white
+[trello-url]: https://trello.com/
+[Heroku.shield]: https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white
+[Herpku-url]: https://trello.com/
 

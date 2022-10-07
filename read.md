@@ -13,18 +13,25 @@
 
 ## Objetivo
 
+Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
+
+Sistema com cadastro de usuários (log in, senha, perfil).
+
+Inclusão de Sistema de Fidelidade, para gerar bônus ou desconto para o cliente que consumir repetidamente um serviço no estabelecimento. (Funcionalidade com direito de ativar ou desativar conforme necessidade).
+
+Utilizaremos ferramentas de back e front-end em python, como Django, assim como javascript, html, css e utilização de banco de dados relacionais entre clientes e fornecedores de serviços.
+
 ## Tecnologias
 
 Foram utilizadas as seguintes tecnologias na construção deste projeto:
 
-* <b>Python</b>;
-* <b>Visual Studio 2022</b>;
-* <b>JavaScript</b>
+
+
+
 * <b>Html</b>
-* <b>BootStrap</b>
-* <b>CSS</b>
-* <b>MySql</b>
-* <b>GitHub</b>.
+
+
+
 
 ## Instalação
 
