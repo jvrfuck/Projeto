@@ -199,7 +199,7 @@ def generate_daylist():
         day["F_booked"] = (
             Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
         )
-        if day["day"] != "SATURDAY":  # Writing lab doesn't open on Saturday
+        if day["day"] != "SUNDAY":  # Writing lab doesn't open on Saturday
             daylist.append(day)
     return daylist
 
@@ -242,16 +242,17 @@ class SessionCreateView(LoginRequiredMixin, CreateView):
 
 
 class SessionEditView(
-    SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView
+    SuccessMessageMixin, LoginRequiredMixin, UpdateView
 ):
     model = Calendario
     fields = ["course_name", "course_teacher", "helptype"]
     # success_url = "/users/<str:username>/"
     success_message = "Session was updated successfully"
-
-    def form_valid(self, form):
-        form.instance.course_name = self.request.user
-        return super().form_valid(form)
+    template_name = "calendario/session_form.html"
+    
+    # def form_valid(self, form):
+    #     form.instance.course_name = self.request.user
+    #     return super().form_valid(form)
 
     def test_func(self):
         session = self.get_object()
@@ -261,9 +262,9 @@ class SessionEditView(
     
 
 
-class SessionCancelView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class SessionCancelView(LoginRequiredMixin, DeleteView):
     model = Calendario
-
+    template_name = "calendario/session_confirm_delete.html"
     def test_func(self):
         session = self.get_object()
         if self.request.user == session.course_name:
