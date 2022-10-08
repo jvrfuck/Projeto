@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jvrfuck/Projeto">
-    <img src="app1/static/imagens/Logo.jpg" alt="site" width="180" height="180">
+    <img src="app1/static/imagens/Logo.jpg" alt="site" width="600" height="400">
   </a>
 
 <h3 align="center">Agendaí</h3>
@@ -62,7 +62,7 @@
 [![agendai][agendai.shield]][agendai-url]
 
 <p align="center">
-<img src="app1/static/imagens/site.jpg" alt="site" width="150" height="100">
+<img src="app1/static/imagens/site.jpg" alt="site" width="420" height="260">
 </p>
 
 Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
@@ -177,12 +177,17 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 ## Agradecimentos
 
 À instituição de ensino Entra21 BlueSoft,contribuiu de maneira essencial para o processo de formação profissional, pelo fornecimento de dados e materiais que foram fundamentais para o desenvolvimento da pesquisa que possibilitou a realização deste Projeto.
+
 [![entra21][entra21.shield]][entra21-url]
 
 Quero agradecer a todos os professores do Entra21, especialmente ao seu orientador de Python, prof. Adriano Machado. Obrigado mestre por exigir mais do que nos acreditavamos que seriamos capazes de realizar. Deixamos aqui nossa eterna gratidão pelo compartilhamento de seu conhecimento e tempo, bem como sua amizade.
-[![adriano][adriano.shield]][adriano-url]
+
+[![Adrianowpp][Adrianowpp.shield]][Adrianowpp-url]
+[![Adrianoemail][Adrianoemail.shield]][Adrianoemail-url]
+[![Adrianolink][Adrianolink.shield]][Adrianolink-url]
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
+
 
 ## Autores 
 
@@ -244,8 +249,13 @@ Quero agradecer a todos os professores do Entra21, especialmente ao seu orientad
 <!-- Agradecimento -->
 [entra21.shield]: https://img.shields.io/badge/Entra21-1B6AC6.svg?style=for-the-badge&logo=gnu-emacs&logoColor=white
 [entra21-url]: https://www.entra21.com.br/
-[Adriano.shield]:  
-[Adriano-url]: 
+[Adrianowpp.shield]: https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
+[Adrianowpp-url]: https://api.whatsapp.com/send/?phone=556792636781&text&type=phone_number&app_absent=0
+[Adrianoemail.shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[Adrianoemail-url]: mailto:adriano@machado.tec.br
+[Adrianolink.shield]: https://img.shields.io/badge/Adriano%20Machado-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
+[Adrianolink-url]: https://www.linkedin.com/in/xadrak/
+
 
 <!-- Autores -->
 [clayson.shield]: https://img.shields.io/badge/Clayson%20Nardino-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
