@@ -23,7 +23,7 @@
     <a href="https://github.com/jvrfuck/Projeto"><strong>Explore o Projeto»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jvrfuck/Projeto">View Demo</a>
+    <a href="">View Demo (colocar o link do heroku)</a>
     ·
     <a href="https://github.com/jvrfuck/Projeto/issues">Reporte Bugs</a>
     ·
@@ -115,7 +115,7 @@ Para colocar uma cópia em execução na sua maquina local, siga as etapas abaix
 
 ### Pré-requisitos
 
-Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de desenvolvimento para obter as senhas necessarias.
+Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de desenvolvimento para obter as senhas necessárias.
 
 * .Env 
     ou
@@ -126,9 +126,33 @@ Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de 
 
 ## Agendaí em Uso
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+O Aplicativo Agendaí é um agendador online feito para empresas.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<p align="center">
+<img src="app1/static/imagens/site.jpg" alt="site" width="300" height="160">
+</p>
+
+COLOCAR GIF da TELA COMPLETA DO COMEÇO FAZER AS EMPRESAS PARCEIRAS
+
+Sistema de adicionar as Empresas e Clientes(pessoas) parceiras que irao utilizar o sistema.
+
+<p align="center">
+<img src="app1/static/imagens/cadastro_empresa.jpeg" alt="site" width="300" height="160">
+</p>
+
+<p align="center">
+<img src="app1/static/imagens/cadastro_cliente.jpeg" alt="site" width="300" height="160">
+</p>
+
+Sendo possível escolher o horário e o dia que irá ser o seu agendamento (ESPERAR AS TELA AGENDAMENTO OU CALENDARIO)
+
+<p align="center">
+<img src="app1/static/imagens/agendamento.jpeg" alt="site" width="300" height="160">
+</p>
+
+ARRUMAR AS TELA ACIMA PARA DEIXAR SEM OS EX ERRADOS
+
+
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
@@ -137,18 +161,20 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Cadastro de Clientes
     - [x] Banco de Dados Relacionados
-- [x] Cadastro de Empreasas
+    - [x] Envio de confirmação através do Email
+- [x] Cadastro de Empresas
     - [x] Banco de Dados Relacionados
-- [x] Cadastro de Horarios
-- [x] Agendamentos de Horarios
+    - [x] Envio de confirmação através do Email
+- [x] Cadastro de Horários
+- [x] Agendamentos de Horários
+    - [x] Envio de confirmação através do Email
     - [x] Banco de Dados Relacionados
-    - [x] Confirmaçao automatica de Email
-- [x] Autenticaçao Social (via google)
-- [x] Automatizaçao de Emails
-
+    - [x] confirmação automática de Email
+- [x] Autenticação Social (via google)
+- [x] Automatizaçao Email
 - [ ] Forma de Pagamento Online
 - [ ] Fidelidade ao cliente
-- [ ] Controle da Gestao da empresa 
+- [ ] Controle da Gestão da empresa 
     - [ ] Quanto cada cliente gasta
     - [ ] Quanto cada profissional recebe 
 
@@ -173,11 +199,11 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Agradecimentos
 
-À instituição de ensino Entra21 BlueSoft,contribuiu de maneira essencial para o processo de formação profissional, pelo fornecimento de dados e materiais que foram fundamentais para o desenvolvimento da pesquisa que possibilitou a realização deste Projeto.
+À instituição de ensino Entra21 BlueSoft, contribuiu de maneira essencial para o processo de formação profissional, pelo fornecimento de dados e materiais que foram fundamentais para o desenvolvimento da pesquisa que possibilitou a realização deste Projeto.
 
 [![entra21][entra21.shield]][entra21-url]
 
-Quero agradecer a todos os professores do Entra21, especialmente ao seu orientador de Python, prof. Adriano Machado. Obrigado mestre por exigir mais do que nos acreditavamos que seriamos capazes de realizar. Deixamos aqui nossa eterna gratidão pelo compartilhamento de seu conhecimento e tempo, bem como sua amizade.
+Queremos agradecer a todos os professores do Entra21, especialmente ao orientador de Python, prof. Adriano Machado. Obrigado mestre por exigir mais do que nos acreditávamos que seriamos capazes de realizar. Deixamos aqui nossa eterna gratidão pelo compartilhamento de seu conhecimento e tempo, bem como sua amizade.
 
 [![Adrianowpp][Adrianowpp.shield]][Adrianowpp-url]
 [![Adrianoemail][Adrianoemail.shield]][Adrianoemail-url]

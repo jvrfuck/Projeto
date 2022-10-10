@@ -12,7 +12,7 @@
                     </fieldset>
                     <div class="form-group">
                         <a class="btn btn-outline-secondary" href="{% url 'session-detail' object.id  %}">Voltar</a>
-                        <button class="btn btn-outline-danger" href="{% url 'session-detail' object.id  %}">Cancelar</button>
+                        <button class="btn btn-outline-danger" href="{% url 'session-cancel' object.id %}">Cancelar</button>
                     </div>
                 </form>
             </div>
