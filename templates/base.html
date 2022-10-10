@@ -14,7 +14,7 @@
 <body>
 <div>     
     <main class="conteudo">
-        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search custom">
            
             <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/Agendaí.png' %}"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
@@ -25,46 +25,51 @@
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                         <a class="nav-link active" href="/lista/empresas">Empresas</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                         <a class="nav-link active" href="/lista/pessoas">Pessoas</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                         <a class="nav-link active" href="/agendai">Agendamento</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                         <a class="nav-link active" href="/lista/sessions/home">Calendario</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                         <a class="nav-link active" href="/gerenciamento-agendamentos">Gerenciamento</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item custom">
                             <a class="nav-link active" href="/admin">Admin</a>
                         </li>
-                    <li class="nav-item" role="presentation">
+                    <li class="nav-item custom" role="presentation">
                         <a class="nav-link active" href="/#team">Sobre Nós</a>
                     </li>
                   </a>
                   <span class="badge badge-danger">{{count}}</span>
                 </li>
                 {% else %}
-                <li class="nav-item" role="presentation">
+                <li class="nav-item custom" role="presentation">
                     <a class="nav-link active" href="/#team">Sobre Nós</a>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item custom" role="presentation">
                     <a class="nav-link active" href="/#services">Empresas Parceiras</a>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item custom" role="presentation">
                     <a class="nav-link active" href="/#contact">Contatos</a>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" href="/accounts/login">Entrar/Cadastrar</a>
-                </li>        
+            <div class="criar-entrar">
+                <li class="nav-item custom" role="presentation">
+                    <a class="nav-link-1 active custom" href="/accounts/login">Entrar</a>
+                </li>   
+                <li class="nav-item custom" role="presentation">
+                    <a class="nav-link active custom" href="/accounts/signup">Cadastrar</a>
+                </li>    
+            </div>   
                 {% endif %}  
                 {% if user.is_authenticated %}
-                <li class="nav-item">
+                <li class="nav-item custom">
                         <a class="nav-link active" href="/accounts/logout">Sair </a>
                 </li>
                 {% endif %}

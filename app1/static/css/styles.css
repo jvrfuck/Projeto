@@ -8,7 +8,34 @@ body {
   position: relative;
   height: 100%;
 }
+.navbar.custom{
+  
+  margin: 6px;
+  font-size: 20px;
 
+}
+.criar-entrar{
+  display: flex;
+  align-items: center;
+  
+}
+.nav-link.custom{
+  margin-left: 1100%;
+ 
+}
+.nav-link-1.custom{
+  margin-left: 2000%;
+  color: white;
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 56px;
+}
 .cabecalho {
   display: flex;
   flex-direction: row;
