@@ -9,7 +9,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
 <br />
 <div align="center">
   <a href="https://github.com/jvrfuck/Projeto">
@@ -30,7 +29,6 @@
     ·
   </p>
 </div>
-
 
 <details>
   <summary>Índice</summary>
@@ -154,7 +152,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Quanto cada cliente gasta
     - [ ] Quanto cada profissional recebe 
 
-
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
 
@@ -255,7 +252,6 @@ Quero agradecer a todos os professores do Entra21, especialmente ao seu orientad
 [Adrianoemail-url]: mailto:adriano@machado.tec.br
 [Adrianolink.shield]: https://img.shields.io/badge/Adriano%20Machado-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [Adrianolink-url]: https://www.linkedin.com/in/xadrak/
-
 
 <!-- Autores -->
 [clayson.shield]: https://img.shields.io/badge/Clayson%20Nardino-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
