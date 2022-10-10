@@ -128,9 +128,9 @@ class Calendario(models.Model):
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(max_length=10, choices=TIMEBLOCK_CHOICES, default="A")
 
-    course_name = models.CharField(max_length=30, default="")
-    course_teacher = models.CharField(max_length=30, default="")
-    helptype = models.CharField(max_length=50, default="")
+    nome_completo = models.CharField(max_length=30, default="")
+    email = models.CharField(max_length=30, default="")
+    serviço = models.CharField(max_length=50, default="")
 
     # @property
     def is_upcoming(self):
@@ -145,7 +145,7 @@ class Calendario(models.Model):
         return self.date.strftime("%A")
 
     def __str__(self) -> str:
-        return f"{self.course_name}: {self.date} ({self.timeblock})"
+        return f"{self.nome_completo}: {self.date} ({self.timeblock})"
 
     def get_absolute_url(self):
         # returns a complete url string and let view handle the redirect

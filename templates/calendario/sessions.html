@@ -7,10 +7,10 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2">{{ session.course_name }}</a>
+            <a class="mr-2">{{ session.nome_completo }}</a>
             <small class="text-muted">{{ session.date|date:"F d, Y" }}</small>
         </div>
-        <h2><a class="article-title" href="{% url 'session-detail' session.id %}">{{ session.helptype }}</a></h2>
+        <h2><a class="article-title" href="{% url 'session-detail' session.id %}">{{ session.serviço }}</a></h2>
         <p class="article-content">{{ session.date|date:"l" }}</p>
     </div>
 </article>

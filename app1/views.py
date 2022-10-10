@@ -225,7 +225,7 @@ class SessionDetailView(DetailView):
 # note: mixins should come before CreateView
 class SessionCreateView(LoginRequiredMixin, CreateView):
     # model = Session
-    # fields = ["date", "timeblock", "course_name", "course_teacher", "helptype"]
+    # fields = ["date", "timeblock", "nome_completo", "email", "serviço "]
     form_class = SessionForm
     template_name = "calendario/session_form.html"
 
@@ -250,18 +250,18 @@ class SessionEditView(
     SuccessMessageMixin, LoginRequiredMixin, UpdateView
 ):
     model = Calendario
-    fields = ["course_name", "course_teacher", "helptype"]
+    fields = ["nome_completo", "email", "serviço"]
     # success_url = "/users/<str:username>/"
     success_message = "Session was updated successfully"
     template_name = "calendario/session_form.html"
     
     # def form_valid(self, form):
-    #     form.instance.course_name = self.request.user
+    #     form.instance.nome_completo = self.request.user
     #     return super().form_valid(form)
 
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.course_name:
+        if self.request.user == session.nome_completo:
             return True
         return False
     
@@ -272,11 +272,13 @@ class SessionCancelView(LoginRequiredMixin, DeleteView):
     template_name = "calendario/session_confirm_delete.html"
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.course_name:
+        if self.request.user == session.nome_completo:
             return True
         return False
 
-  
+    def get_success_url(self):
+        return reverse("session-detail", args=[self.object.id])
+
 
 
 def home(request):

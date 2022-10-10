@@ -18,16 +18,16 @@ class EmpresasForm(forms.ModelForm):
 class SessionForm(forms.ModelForm):
     date = forms.DateField(disabled=True)
     # timeblock = forms.CharField(disabled=True)
-    course_name = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "i.e. Serviço"}), required=False
+    nome_completo = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "insira seu nome"}), required=False
     )
-    course_teacher = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "i.e. Empresa"}), required=False
+    email = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "informe seu email"}), required=False
     )
-    helptype = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "i.e. Term paper"}), required=False
+    serviço = forms.CharField(
+        widget=forms.TextInput(attrs={"placeholder": "informe o procedimento desejado"}), required=False
     )
 
     class Meta:
         model = Calendario
-        fields = ["date", "timeblock", "course_name", "course_teacher", "helptype"]
+        fields = ["date", "timeblock", "nome_completo", "email", "serviço"]
