@@ -204,6 +204,53 @@ def generate_daylist():
         day["F_booked"] = (
             Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
         )
+        day["G_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["H_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["I_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["J_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["K_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["L_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["M_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["N_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["O_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["P_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["Q_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["R_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["S_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["T_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["U_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+
+        
         if day["day"] != "SUNDAY":  # Writing lab doesn't open on Saturday
             daylist.append(day)
     return daylist
