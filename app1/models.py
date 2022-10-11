@@ -96,41 +96,36 @@ class Locais(models.Model):
 class Calendario(models.Model):
     
     TIMEBLOCK_CHOICES = (
-        ("A", "8:00-8:20"),
-        ("B", "8:20-8:40"),
-        ("C", "8:40-9:00"),
-        ("D", "9:00-9:20"),
-        ("E", "9:20-9:40"),
-        ("F", "9:40-10:00"),
-        ("G", "10:00-10:20"),
-        ("H", "10:40-11:00"),
-        ("I", "11:00-11:20"),
-        ("J", "11:20-11:40"),
-        ("K", "11:40-12:00"),
-        ("L", "13:30-13:50"),
-        ("M", "14:00-14:20"),
-        ("N", "14:20-14:40"),
-        ("O", "15:00-15:20"),
-        ("P", "15:20-15:40"),
-        ("Q", "15:40-16:00"),
-        ("R", "16:00-16:20"),
-        ("S", "16:20-16:40"),
-        ("T", "16:40-17:00"),
-        ("U", "17:00-17:20"),
-        ("V", "17:20-17:40"),
-        ("W", "17:40-18:00"),
-        ("X", "18:00-18:20"),
-        ("Y", "18:20-18:40"),
-        ("Z", "18:40-19:00")
+        ("A", "8:00-8:30"),
+        ("B", "8:30-9:00"),
+        ("C", "9:00-9:30"),
+        ("D", "9:30-10:00"),
+        ("E", "10:00-10:30"),
+        ("F", "10:30-11:00"),
+        ("G", "11:00-11:30"),
+        ("H", "11:30-12:00"),
+        ("I", "13:30-14:00"),
+        ("J", "14:00-14:30"),
+        ("K", "14:30-15:00"),
+        ("L", "15:00-15:30"),
+        ("M", "15:30-16:00"),
+        ("N", "16:00-16:30"),
+        ("O", "16:30-17:00"),
+        ("P", "17:00-17:30"),
+        ("Q", "17:30-18:00"),
+        ("R", "18:00-18:30"),
+        ("S", "18:30-19:00"),
+        ("T", "19:00-19:30"),
+        ("U", "19:30-20:00")
     )
 
     date_posted = models.DateTimeField(default=timezone.now)
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(max_length=10, choices=TIMEBLOCK_CHOICES, default="A")
 
-    course_name = models.CharField(max_length=30, default="")
-    course_teacher = models.CharField(max_length=30, default="")
-    helptype = models.CharField(max_length=50, default="")
+    nome_completo = models.CharField(max_length=30, default="")
+    email = models.CharField(max_length=30, default="")
+    serviço = models.CharField(max_length=50, default="")
 
     # @property
     def is_upcoming(self):
@@ -145,7 +140,7 @@ class Calendario(models.Model):
         return self.date.strftime("%A")
 
     def __str__(self) -> str:
-        return f"{self.course_name}: {self.date} ({self.timeblock})"
+        return f"{self.nome_completo}: {self.date} ({self.timeblock})"
 
     def get_absolute_url(self):
         # returns a complete url string and let view handle the redirect

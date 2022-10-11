@@ -6,16 +6,17 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ object.course_name }}</a>
+            <a class="mr-2" href="#">{{ object.serviço }}</a>
+            <a class="mr-2" href="#">{{ object.email }}</a>
             <small class="text-muted">{{ object.date|date:"F d, Y" }}</small>
             
             <div>
-                <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'session-edit' object.id %}">Edit</a>
-                <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'session-cancel' object.id %}">Cancel</a>
+                <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'session-edit' object.id %}">Editar</a>
+                <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'session-cancel' object.id %}">Cancelar</a>
             </div>
             
         </div>
-        <h2 class="article-title">{{ object.helptype }}</h2>
+        <h2 class="article-title">{{ object.nome_completo }}</h2>
         <p class="article-content">{{ object.date|date:"l" }}</p>
     </div>
 </article>

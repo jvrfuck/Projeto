@@ -204,6 +204,53 @@ def generate_daylist():
         day["F_booked"] = (
             Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
         )
+        day["G_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["H_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["I_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["J_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["K_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["L_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["M_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["N_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["O_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["P_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["Q_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["R_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["S_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["T_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+        day["U_booked"] = (
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+        )
+
+        
         if day["day"] != "SUNDAY":  # Writing lab doesn't open on Saturday
             daylist.append(day)
     return daylist
@@ -225,7 +272,7 @@ class SessionDetailView(DetailView):
 # note: mixins should come before CreateView
 class SessionCreateView(LoginRequiredMixin, CreateView):
     # model = Session
-    # fields = ["date", "timeblock", "course_name", "course_teacher", "helptype"]
+    # fields = ["date", "timeblock", "nome_completo", "email", "serviço "]
     form_class = SessionForm
     template_name = "calendario/session_form.html"
 
@@ -250,18 +297,18 @@ class SessionEditView(
     SuccessMessageMixin, LoginRequiredMixin, UpdateView
 ):
     model = Calendario
-    fields = ["course_name", "course_teacher", "helptype"]
+    fields = ["nome_completo", "email", "serviço"]
     # success_url = "/users/<str:username>/"
     success_message = "Session was updated successfully"
     template_name = "calendario/session_form.html"
     
     # def form_valid(self, form):
-    #     form.instance.course_name = self.request.user
+    #     form.instance.nome_completo = self.request.user
     #     return super().form_valid(form)
 
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.course_name:
+        if self.request.user == session.nome_completo:
             return True
         return False
     
@@ -272,11 +319,13 @@ class SessionCancelView(LoginRequiredMixin, DeleteView):
     template_name = "calendario/session_confirm_delete.html"
     def test_func(self):
         session = self.get_object()
-        if self.request.user == session.course_name:
+        if self.request.user == session.nome_completo:
             return True
         return False
 
-  
+    def get_success_url(self):
+        return reverse("session-detail", args=[self.object.id])
+
 
 
 def home(request):
