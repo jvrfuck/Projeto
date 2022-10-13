@@ -84,10 +84,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'proj.wsgi.application'
 
-# try:
-#     DATABASE_URL = os.getenv('DATABASE_URL')
-# except ImportError:
-#     pass
+try:
+   DBPASSWORD = os.getenv('DBPASSWORD')
+except ImportError:
+    pass
 
 # DATABASES = {}
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600)
@@ -95,10 +95,10 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': config("DBNAME"),
-        'USER': config("DBNAME"),
-        'PASSWORD': config("DBPASSWORD"),
-        'HOST': config("DBHOST"),
+        'NAME':"pye2122g1",
+        'USER': 'pye2122g1',
+        'PASSWORD': DBPASSWORD,
+        'HOST': "3.89.36.150",
         'PORT': '3306',
     }
 }
