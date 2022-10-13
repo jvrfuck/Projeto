@@ -6,7 +6,7 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ object.serviço }}</a>
+            <a class="mr-2" href="#">{{ object.nome_completo }}</a>
             <a class="mr-2" href="#">{{ object.email }}</a>
             <small class="text-muted">{{ object.date|date:"F d, Y" }}</small>
             
@@ -16,7 +16,7 @@
             </div>
             
         </div>
-        <h2 class="article-title">{{ object.nome_completo }}</h2>
+        <h2 class="article-title">{{ object.serviço }}</h2>
         <p class="article-content">{{ object.date|date:"l" }}</p>
     </div>
 </article>
