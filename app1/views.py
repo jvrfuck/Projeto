@@ -167,7 +167,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import (
     CreateView,
     DeleteView,
@@ -205,49 +205,49 @@ def generate_daylist():
             Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
         )
         day["G_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="G").exists()
         )
         day["H_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="H").exists()
         )
         day["I_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="I").exists()
         )
         day["J_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="J").exists()
         )
         day["K_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="K").exists()
         )
         day["L_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="L").exists()
         )
         day["M_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="M").exists()
         )
         day["N_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="N").exists()
         )
         day["O_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="O").exists()
         )
         day["P_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="P").exists()
         )
         day["Q_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="Q").exists()
         )
         day["R_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="R").exists()
         )
         day["S_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="S").exists()
         )
         day["T_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="T").exists()
         )
         day["U_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="F").exists()
+            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="U").exists()
         )
 
         
@@ -317,15 +317,13 @@ class SessionEditView(
 class SessionCancelView(LoginRequiredMixin, DeleteView):
     model = Calendario
     template_name = "calendario/session_confirm_delete.html"
+    success_url = '/lista/sessions/home'
+    
     def test_func(self):
         session = self.get_object()
         if self.request.user == session.nome_completo:
             return True
         return False
-
-    def get_success_url(self):
-        return reverse("session-detail", args=[self.object.id])
-
 
 
 def home(request):
