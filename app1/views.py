@@ -216,39 +216,39 @@ def generate_daylist():
         day["J_booked"] = (
             Calendario.objects.filter(date=str(curr_day)).filter(timeblock="J").exists()
         )
-        day["K_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="K").exists()
-        )
-        day["L_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="L").exists()
-        )
-        day["M_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="M").exists()
-        )
-        day["N_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="N").exists()
-        )
-        day["O_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="O").exists()
-        )
-        day["P_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="P").exists()
-        )
-        day["Q_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="Q").exists()
-        )
-        day["R_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="R").exists()
-        )
-        day["S_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="S").exists()
-        )
-        day["T_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="T").exists()
-        )
-        day["U_booked"] = (
-            Calendario.objects.filter(date=str(curr_day)).filter(timeblock="U").exists()
-        )
+        # day["K_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="K").exists()
+        # )
+        # day["L_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="L").exists()
+        # )
+        # day["M_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="M").exists()
+        # )
+        # day["N_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="N").exists()
+        # )
+        # day["O_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="O").exists()
+        # )
+        # day["P_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="P").exists()
+        # )
+        # day["Q_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="Q").exists()
+        # )
+        # day["R_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="R").exists()
+        # )
+        # day["S_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="S").exists()
+        # )
+        # day["T_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="T").exists()
+        # )
+        # day["U_booked"] = (
+        #     Calendario.objects.filter(date=str(curr_day)).filter(timeblock="U").exists()
+        # )
 
         
         if day["day"] != "SUNDAY":  # Writing lab doesn't open on Saturday
