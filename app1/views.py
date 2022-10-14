@@ -160,6 +160,13 @@ def pessoa_delete(request, id):
     messages.info(request, 'Pessoa apagado do banco de dados')
     return redirect('/lista/pessoas/')
 
+
+def estetica(request):
+    return render(request, 'empresas/esteticabeatriz.html')   
+
+def escolajj(request):
+    return render(request, 'empresas/escolajiujitsu.html')        
+
 ####################################################################
 import datetime
 
@@ -338,4 +345,5 @@ def about(request):
 def sessions(request):
     context = {"sessions": Calendario.objects.all()}
     return render(request, "calendario/sessions.html", context)
+
 
