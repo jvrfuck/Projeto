@@ -17,10 +17,9 @@
     </div>
 <div class="cadastro">
 <form class="cadastre" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-
-  <form class="cadastre" id="signup_form" method="post" action="/accounts/signup/">
+  <form class="cadastre" id="signup_form" method="post" action="/accounts/signup/">   
     <input type="hidden" name="csrfmiddlewaretoken" value="pwTibctJXet9TIWKCnNtGsSqxDVx2ZJimqXSQR8R1XEefnNXn8kWGkBCzV9yIVRU">
+    {% csrf_token %}
     <p>
       <input type="email" name="email" placeholder="Endereço de e-mail" autocomplete="email" required="" id="id_email">
     </p>
@@ -28,8 +27,7 @@
       <input type="text" name="username" placeholder="Nome de usuário" autocomplete="username" minlength="1" maxlength="150" required="" id="id_username">
     </p>
     <p> 
-      <input type="text" name="cpf"     
-      placeholder="CPF" autocomplete="cpf" maxlength="12" required="" id="id_cpf">
+      <input type="text" name="cpf" placeholder="CPF" autocomplete="cpf" autocomplete="cpf"  required="" id="id_cpf">
     </p>
     <p>
       <input name="data nascimento" placeholder="Data de nascimento"  autocomplete="data nascimento" id="id_date" type="date">

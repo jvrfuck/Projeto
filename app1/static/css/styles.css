@@ -2,15 +2,15 @@
 
 body {
   font-size: 100%;
-  background:#f06b87;
+  background:#e7cccc;
   padding: 0;
   margin: 0;
   position: relative;
   height: 100%;
 }
 .navbar.custom{
-  background:#f04b6e;
-  border-color:#f04b6e;
+  background:#b96969;
+  border-color:#b86565;
   font-size: 20px;
   border:6px;
   box-shadow: 0px 0px 6px 0px rgba(24, 22, 19, 0.5);
@@ -21,8 +21,6 @@ body {
   align-items: center;
   
 }
-
-
 
 .logo {
   display: flex;
@@ -68,7 +66,7 @@ body {
 footer {
   position: static;
   bottom: 0;
-  background:#f06b87;
+  background:#e7cccc;
   height: 100px;
   border-top: 1px solid #202020;
   width: 100%;

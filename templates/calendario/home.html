@@ -2,9 +2,9 @@
 {% block content %}
 {% for day in days %}
 
-<div class="container-fluid px-1 py-5 mx-auto">
+<div class="container mt-5">    
     <div class="d-flex justify-content-center">
-        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+        <div class="col-12 text-center">
             <article class="media content-section center">
                 <div class="col-md-5 bg-grey p-3">
                 <div class="media-body">
@@ -15,150 +15,73 @@
                     <h2><a class="article-title" href="#">{{ day.onduty }}</a></h2>
                     <p class="article-content">{{ day.dept }}</p>
                     {% if not day.A_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'A' %}">8:00-8:30</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'A' %}">9:00-10:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.B_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'B' %}">8:30-9:00</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'B' %}">10:00-11:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.C_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'C' %}">9:00-9:30</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'C' %}">11:00-12:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.D_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'D' %}">9:30-10:00</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'D' %}">14:00-15:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.E_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'E' %}">10:00-10:30</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'E' %}">15:00-16:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.F_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'F' %}">10:30-11:00</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'F' %}">16:00-17:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.G_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'G' %}">11:00-11:30</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'G' %}">17:00-18:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.H_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'H' %}">11:30-12:00</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'H' %}">18:00-19:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.I_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'I' %}">13:30-14:00</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'I' %}">19:00-20:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
 
                     {% if not day.J_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'J' %}">14:00-14:30</a>
+                        <a class='btn btn-light btn-lg btn-block'
+                            href="{% url 'session-create-spec' day.date 'J' %}">20:00-21:00</a>
                     {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.K_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'K' %}">14:30-15:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.L_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'L' %}">15:00-15:30</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.M_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'M' %}">15:30-16:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.N_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'N' %}">16:00-16:30</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.O_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'O' %}">16:30-17:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.P_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'P' %}">17:00-17:30</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.Q_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'Q' %}">17:30-18:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.R_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'R' %}">18:00-18:30</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.S_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'S' %}">18:30-19:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.T_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'T' %}">19:00-19:30</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
-                    {% endif %}
-
-                    {% if not day.U_booked %}
-                        <a class='btn btn-success btn-lg btn-block'
-                            href="{% url 'session-create-spec' day.date 'U' %}">19:30-20:00</a>
-                    {% else %}
-                        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+                        <a class='btn btn-outline-dark btn-lg btn-block' disabled>Agendado</a>
                     {% endif %}
                         </div>
                     </div>

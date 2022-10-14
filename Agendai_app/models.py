@@ -12,9 +12,8 @@ class Agendamento(models.Model):
     accepted = models.BooleanField(default=False)
     accepted_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
-    
     def __str__ (self):
-        return '%s %s %s %s %s %s' % (self.first_name, self.last_name, self.email, self.phone, self.cpf, self.nascimento)
+        return '%s %s %s %s %s %s ' % (self.first_name, self.last_name, self.email, self.phone, self.cpf, self.nascimento)
 
     class Meta:
         ordering = ["-sent_date"]
