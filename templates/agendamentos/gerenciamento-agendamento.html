@@ -368,20 +368,20 @@
                         <div class="widget-49">
                             <div class="widget-49-title-wrapper">
                                 <div class="widget-49-date-primary">
-                                  <li><span class="widget-49-date-day">{{agendamento.dia}}</span>
+                                  <li><span class="widget-49-date-day">{{agendamento.nascimento}}</span>
 
                                 </div>
                                 <div class="widget-49-meeting-info">
-                                    <li><span class="widget-49-pro-title">{{agendamento.email}}</span>
+                                    <li><span class="widget-49-pro-title">{{agendamento.request}}</span>
                                     <li><span class="widget-49-meeting-time">{{agendamento.phone}}</span>
                                 </div>
                                 <div class="widget-49-meeting-info">
                                   <li><span class="widget-49-meeting-time">{{agendamento.cpf}}</span>
-                                  <li><span class="widget-49-meeting-time">{{agendamento.nascimento}}</span>
+                                  <!-- <li><span class="widget-49-meeting-time">{{agendamento.nascimento}}</span> -->
                               </div>
                             </div>
                             <div class="widget-49-meeting-points">
-                                <li><span>{{agendamento.request}}</span>
+                                <li><span>{{agendamento.email}}</span>
                             </div>
                             <hr class="w-100">
                             {% if agendamento.accepted == False %}
