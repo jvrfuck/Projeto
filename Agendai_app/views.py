@@ -1,6 +1,6 @@
 from django.http.response import HttpResponseRedirect
 from django.core.mail import EmailMessage
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.conf import settings
@@ -29,7 +29,7 @@ class HomeTemplateView(TemplateView):
             reply_to=[email]
         )
         email.send()
-        return 
+        return redirect('/')
 
 
 class AgendamentoTemplateView(TemplateView):
