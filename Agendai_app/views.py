@@ -44,7 +44,6 @@ class AgendamentoTemplateView(TemplateView):
         message = request.POST.get("message")
         cpf = request.POST.get("cpf")
         nascimento = request.POST.get("nascimento")
-        dia = request.POST.get("dia")
 
         appointment = Agendamento.objects.create(
             first_name=fname,
@@ -54,7 +53,6 @@ class AgendamentoTemplateView(TemplateView):
             request=message,
             cpf=cpf,
             nascimento=nascimento,
-            dia=dia,
         )
 
         appointment.save()
