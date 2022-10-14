@@ -132,6 +132,20 @@ O Aplicativo Agendaí é um agendador online feito para empresas.
 <img src="app1/static/imagens/site.jpg" alt="site" width="300" height="160">
 </p>
 
+O cadastramento pode ser feito manualmente pelo cliente ou pelo Google através da pagina de Login
+
+<p align="center">
+<img src="app1/static/imagens/cadastro.jpg" alt="site" width="300" height="160">
+</p>
+
+Pagina de Login para usuários já cadastrados 
+
+<p align="center">
+<img src="app1/static/imagens/Login.jpg" alt="site" width="300" height="160">
+</p>
+
+
+
 COLOCAR GIF da TELA COMPLETA DO COMEÇO FAZER AS EMPRESAS PARCEIRAS
 
 Sistema de adicionar as Empresas e Clientes(pessoas) parceiras que irao utilizar o sistema.
@@ -150,7 +164,11 @@ Sendo possível escolher o horário e o dia que irá ser o seu agendamento (ESPE
 <img src="app1/static/imagens/agendamento.jpeg" alt="site" width="300" height="160">
 </p>
 
-ARRUMAR AS TELA ACIMA PARA DEIXAR SEM OS EX ERRADOS
+Para entrar em Contato com a Equipe de Desenvolvimento 
+
+<p align="center">
+<img src="app1/static/imagens/entre_em_contato.jpg" alt="site" width="300" height="160">
+</p>
 
 
 
