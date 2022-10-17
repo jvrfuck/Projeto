@@ -258,8 +258,9 @@ def generate_daylist():
         # )
 
         
-        if day["day"] != "SUNDAY":  # Writing lab doesn't open on Saturday
-            daylist.append(day)
+        if day["day"] != "SUNDAY":
+            if day["day"] != "SATURDAY":   
+                daylist.append(day)
     return daylist
 
 
