@@ -41,7 +41,7 @@ class AgendamentoTemplateView(TemplateView):
         lname = request.POST.get("lname")
         email = request.POST.get("email")
         mobile = request.POST.get("mobile")
-        message = request.POST.get("message")
+        message = request.POST.get("appointment-id")
         cpf = request.POST.get("cpf")
         nascimento = request.POST.get("nascimento")
 
@@ -92,7 +92,7 @@ class GerenciamentoAgendamentoTemplateView(ListView):
         email.send()
 
         messages.add_message(request, messages.SUCCESS, f"Você aceitou o agendamento de {appointment.first_name}")
-        return HttpResponse(request.path)
+        return HttpResponseRedirect(request.path)
 
 
     def get_context_data(self, *args, **kwargs):
