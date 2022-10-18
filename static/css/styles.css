@@ -21,7 +21,12 @@ body {
   align-items: center;
   
 }
-
+.jiujistsu{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
 .logo {
   display: flex;
   flex-direction: row;
