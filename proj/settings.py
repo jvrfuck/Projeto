@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from re import TEMPLATE
+from struct import pack
 import django_heroku
 import dj_database_url
 from decouple import config
@@ -150,6 +152,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK= 'bootstrap4'
 
 LOGIN_REDIRECT_URL =  '/'
 ACCOUNT_LOGOUT_REDIRECT_URL =  '/'
