@@ -1,4 +1,4 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 {% load account %}
@@ -7,6 +7,9 @@
 
 
 {% block content %}
+<div class="container px-1 mx-auto">
+    <div class="cadastro">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
 <h1>{% trans "Confirm E-mail Address" %}</h1>
 
 {% if confirmation %}
@@ -28,4 +31,7 @@
 
 {% endif %}
 
+</div>
+</div>
+</div>
 {% endblock %}
