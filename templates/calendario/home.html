@@ -14,6 +14,7 @@
                     </div>
                     <h2><a class="article-title" href="#">{{ day.onduty }}</a></h2>
                     <p class="article-content">{{ day.dept }}</p>
+                    <a class='btn btn-light btn-lg btn-block'href="{% url 'scheduler-sessions' %}">Editar / Cancelar</a>
                     {% if not day.A_booked %}
                         <a class='btn btn-light btn-lg btn-block'
                             href="{% url 'session-create-spec' day.date 'A' %}">9:00-10:00</a>

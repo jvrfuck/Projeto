@@ -3,21 +3,30 @@
 <div class="container-fluid px-1 py-5 mx-auto">
     <div class="d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <table class="table table-bordered table-hover" border = "1" cellspacing = "3" cellpadding = "3" width = "100%">
+                <tr>
+                    <td><span><a class="mr-2" href="#">{{ object.nome_completo }}</a></span></td>
+                    <td><span><a class="mr-2" href="#">{{ object.email }}</a></span></td>
+                    <td><span> <small class="text-muted">{{ object.date|date:"F d, Y" }}</small></span></td> 
+                    <td><span><p class="article-content">{{ object.date|date:"l" }}</p></span></td>   
+                    <td><span><h5 class="article-title">{{ object.serviço }}</h5></span></td>       
+                </tr>
+            </table>
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ object.nome_completo }}</a>
+            <!-- <a class="mr-2" href="#">{{ object.nome_completo }}</a>
             <a class="mr-2" href="#">{{ object.email }}</a>
-            <small class="text-muted">{{ object.date|date:"F d, Y" }}</small>
-            
+            <small class="text-muted">{{ object.date|date:"F d, Y" }}</small> -->
             <div>
+                <a class='btn btn-success btn-small mt-1 mb-1' href="{% url 'scheduler-home'%}">Confirme seu Horário</a>
                 <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'session-edit' object.id %}">Editar</a>
                 <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'session-cancel' object.id %}">Cancelar</a>
             </div>
             
         </div>
-        <h2 class="article-title">{{ object.serviço }}</h2>
-        <p class="article-content">{{ object.date|date:"l" }}</p>
+        
+        
     </div>
 </article>
 </div>

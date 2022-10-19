@@ -7,11 +7,23 @@
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2">{{ session.nome_completo }}</a>
-            <small class="text-muted">{{ session.date|date:"F d, Y" }}</small>
+            <table class="table table-bordered table-hover" border = "1" cellspacing = "3" cellpadding = "3" width = "100%">
+                <tr>
+                    <td><span><a class="mr-2">{{ session.nome_completo }}</a></span></td>
+                    <td><span> <small class="text-muted">{{ session.date|date:"F d, Y" }}</small></span></td>
+                </table>
         </div>
-        <h2><a class="article-title" href="{% url 'session-detail' session.id %}">{{ session.serviço }}</a></h2>
-        <p class="article-content">{{ session.date|date:"l" }}</p>
+        <table class="table table-bordered table-hover" border = "1" cellspacing = "3" cellpadding = "3" width = "100%">
+            <tr>
+                <td><span><h2><a class="article-title" href="{% url 'session-detail' session.id %}">{{ session.serviço }}</a></h2></span></td>
+            </table>
+            <table class="table table-bordered table-hover" border = "1" cellspacing = "3" cellpadding = "3" width = "100%">
+                <tr>
+                    <td><span><p class="article-content">{{ session.date|date:"l" }}</p></span></td>
+                </table>
+       
+       
+        <a class='btn btn-outline-light btn-lg- btn-block' href="{% url 'scheduler-home' %}">Voltar</a>
     </div>
 </article>
 </div>
