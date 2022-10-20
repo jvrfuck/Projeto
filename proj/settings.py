@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'app1',
-    # 'Calendario',
     'crispy_forms',
     'enviaemail',
     'Agendai_app'
