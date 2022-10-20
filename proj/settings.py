@@ -94,16 +94,27 @@ except ImportError:
 # DATABASES = {}
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-DATABASES = {
+try:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql', 
+            'NAME':"pye2122g1",
+            'USER': 'pye2122g1',
+            'PASSWORD': 'pye2122g1@25@ago', #DBPASSWORD
+            'HOST': "3.89.36.150",
+            'PORT': '3306',
+        }
+    }
+except:
+    DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME':"pye2122g1",
-        'USER': 'pye2122g1',
-        'PASSWORD': DBPASSWORD,
-        'HOST': "3.89.36.150",
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',

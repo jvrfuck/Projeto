@@ -14,14 +14,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Calendario',
+            name='calendario',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('CalendarioCreated', models.DateTimeField(auto_now_add=True, verbose_name='TimeStamp')),
             ],
             options={
-                'verbose_name': 'Calendario',
-                'verbose_name_plural': 'Calendarios',
+                'verbose_name': 'calendario',
+                'verbose_name_plural': 'calendarios',
                 'ordering': (),
             },
         ),
