@@ -20,7 +20,7 @@ from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+DEBUG = True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -99,7 +99,7 @@ try:
             'ENGINE': 'django.db.backends.mysql', 
             'NAME':"pye2122g1",
             'USER': 'pye2122g1',
-            'PASSWORD':  DBPASSWORD,
+            'PASSWORD':  'pye2122g1@25@ago',
             'HOST': "3.89.36.150",
             'PORT': '3306',
         }
