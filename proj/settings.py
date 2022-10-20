@@ -100,7 +100,7 @@ try:
             'ENGINE': 'django.db.backends.mysql', 
             'NAME':"pye2122g1",
             'USER': 'pye2122g1',
-            'PASSWORD': 'pye2122g1@25@ago', #DBPASSWORD
+            'PASSWORD':  DBPASSWORD,
             'HOST': "3.89.36.150",
             'PORT': '3306',
         }
