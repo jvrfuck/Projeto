@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jvrfuck/Projeto">
-    <img src="app1/static/imagens/Logo.jpg" alt="site" width="600" height="400">
+    <img src="app1/static/imagens/Logo.png" alt="site" width="600" height="400">
   </a>
 
 <h3 align="center">Agendaí</h3>
@@ -23,9 +23,9 @@
     <a href="https://github.com/jvrfuck/Projeto"><strong>Explore o Projeto»</strong></a>
     <br />
     <br />
-    <a href="">View Demo (colocar o link do heroku)</a>
+    <a href="">Site para Demonstração</a>
     ·
-    <a href="https://github.com/jvrfuck/Projeto/issues">Reporte Bugs</a>
+    <a href="http://agendaieletronica.herokuapp.com/">Reporte Bugs</a>
     ·
   </p>
 </div>
@@ -60,7 +60,7 @@
 [![agendai][agendai.shield]][agendai-url]
 
 <p align="center">
-<img src="app1/static/imagens/site.jpg" alt="site" width="420" height="260">
+<img src="app1/static/imagens/site.jpeg" alt="site" width="420" height="260">
 </p>
 
 Criação de um site/aplicação web para agendamento de horários (sejam consultas, procedimentos em salões de beleza ou reserva de espaços como academias ou salões de festa). 
@@ -111,6 +111,10 @@ Para colocar uma cópia em execução na sua maquina local, siga as etapas abaix
    ```sh
    pip install -r requirements.txt
    ```
+4. Coloque a aplicação para rodar
+   ```sh
+   python manage.py runserver 
+   ```
 
 
 ### Pré-requisitos
@@ -127,50 +131,38 @@ Para fazer alterações no projeto Agendaí , entrar em contato com a equipe de 
 ## Agendaí em Uso
 
 O Aplicativo Agendaí é um agendador online feito para empresas.
-
 <p align="center">
-<img src="app1/static/imagens/site.jpg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/site.jpeg" alt="site" width="300" height="160">
 </p>
 
-O cadastramento pode ser feito manualmente pelo cliente ou pelo Google através da pagina de Login
-
+O cadastramento pode ser feito manualmente pelo cliente ou pelo Google através da página de Login
 <p align="center">
-<img src="app1/static/imagens/cadastro.jpg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/cadastro.jpeg" alt="site" width="300" height="160">
 </p>
 
-Pagina de Login para usuários já cadastrados 
-
+Página de Login
 <p align="center">
-<img src="app1/static/imagens/Login.jpg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/Login.jpeg" alt="site" width="300" height="160">
 </p>
 
-
-
-COLOCAR GIF da TELA COMPLETA DO COMEÇO FAZER AS EMPRESAS PARCEIRAS
-
-Sistema de adicionar as Empresas e Clientes(pessoas) parceiras que irao utilizar o sistema.
-
+Na página inicial escolha a empresa que irá fazer seu agendamento
 <p align="center">
-<img src="app1/static/imagens/cadastro_empresa.jpeg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/empresa.jpeg" alt="site" width="300" height="160">
+</p>
+
+Após clicar na empresa será encaminhando a página de cadastramento para poder informar seus dados
+<p align="center">
+<img src="app1/static/imagens/cadastro_agendamento.jpeg" alt="site" width="300" height="160">
 </p>
 
 <p align="center">
-<img src="app1/static/imagens/cadastro_cliente.jpeg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/escolha_horario.jpeg" alt="site" width="300" height="160">
 </p>
 
-Sendo possível escolher o horário e o dia que irá ser o seu agendamento (ESPERAR AS TELA AGENDAMENTO OU CALENDARIO)
-
+Para entrar em Contato com a Equipe de Desenvolvimento
 <p align="center">
-<img src="app1/static/imagens/agendamento.jpeg" alt="site" width="300" height="160">
+<img src="app1/static/imagens/entre_em_contato.jpeg" alt="site" width="300" height="160">
 </p>
-
-Para entrar em Contato com a Equipe de Desenvolvimento 
-
-<p align="center">
-<img src="app1/static/imagens/entre_em_contato.jpg" alt="site" width="300" height="160">
-</p>
-
-
 
 <p align="right">(<a href="#readme-top">Voltar ao Top</a>)</p>
 
